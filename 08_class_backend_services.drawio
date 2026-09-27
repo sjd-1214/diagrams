@@ -10,110 +10,110 @@
         <mxCell id="5D50KN5zPrAvzWpnFaVA-402" value="«FastAPI Core»&lt;br&gt;&lt;b&gt;fastapi.APIRouter&lt;/b&gt;" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;verticalAlign=top;spacingTop=2;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="720" y="70" width="370" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-403" value="+ prefix : str&lt;br&gt;+ tags : List[str]" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-402" vertex="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-403" value="+ prefix : str&lt;br&gt;+ tags : List[str]" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-402" vertex="1">
           <mxGeometry y="52" width="370" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-404" value="+ get(path, endpoint)&lt;br&gt;+ post(path, endpoint)" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-402" vertex="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-404" value="+ get(path, endpoint)&lt;br&gt;+ post(path, endpoint)" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-402" vertex="1">
           <mxGeometry y="102" width="370" height="55" as="geometry" />
         </mxCell>
         <mxCell id="5D50KN5zPrAvzWpnFaVA-405" value="«APIRouter»&lt;br&gt;&lt;b&gt;SimulationRouter&lt;/b&gt; {prefix=/api/sim}" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;verticalAlign=top;spacingTop=2;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="40" y="70" width="320" height="145" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-406" value="+ start_sim() : dict&lt;br&gt;+ stop_sim() : dict&lt;br&gt;+ get_status() : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-405" vertex="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-406" value="+ start_sim() : dict&lt;br&gt;+ stop_sim() : dict&lt;br&gt;+ get_status() : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-405" vertex="1">
           <mxGeometry y="52" width="320" height="90" as="geometry" />
         </mxCell>
         <mxCell id="5D50KN5zPrAvzWpnFaVA-407" value="«APIRouter»&lt;br&gt;&lt;b&gt;SwarmRouter&lt;/b&gt; {prefix=/api/swarm}" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;verticalAlign=top;spacingTop=2;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="40" y="230" width="320" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-408" value="+ set_base_positions(h_a, h_d) : dict&lt;br&gt;+ start_duel() : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-407" vertex="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-408" value="+ set_base_positions(h_a, h_d) : dict&lt;br&gt;+ start_duel() : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-407" vertex="1">
           <mxGeometry y="52" width="320" height="75" as="geometry" />
         </mxCell>
         <mxCell id="5D50KN5zPrAvzWpnFaVA-409" value="«APIRouter»&lt;br&gt;&lt;b&gt;MissionRouter&lt;/b&gt; {prefix=/api/mission}" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;verticalAlign=top;spacingTop=2;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="40" y="375" width="320" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-410" value="+ start_attack_defend(atk, def) : dict&lt;br&gt;+ abort_mission() : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-409" vertex="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-410" value="+ start_attack_defend(atk, def) : dict&lt;br&gt;+ abort_mission() : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-409" vertex="1">
           <mxGeometry y="52" width="320" height="75" as="geometry" />
         </mxCell>
         <mxCell id="5D50KN5zPrAvzWpnFaVA-411" value="«APIRouter»&lt;br&gt;&lt;b&gt;OffboardRouter&lt;/b&gt; {prefix=/api/offboard}" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;verticalAlign=top;spacingTop=2;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="40" y="520" width="320" height="145" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-412" value="+ arm_drone(drone_id : int) : dict&lt;br&gt;+ disarm_drone(drone_id : int) : dict&lt;br&gt;+ set_mode(drone_id, mode) : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-411" vertex="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-412" value="+ arm_drone(drone_id : int) : dict&lt;br&gt;+ disarm_drone(drone_id : int) : dict&lt;br&gt;+ set_mode(drone_id, mode) : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-411" vertex="1">
           <mxGeometry y="52" width="320" height="90" as="geometry" />
         </mxCell>
         <mxCell id="5D50KN5zPrAvzWpnFaVA-413" value="«APIRouter»&lt;br&gt;&lt;b&gt;AttackRouter&lt;/b&gt; {prefix=/api/attack}" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;verticalAlign=top;spacingTop=2;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="40" y="680" width="320" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-414" value="+ configure_attack(type, intensity) : dict&lt;br&gt;+ clear_attacks() : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-413" vertex="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-414" value="+ configure_attack(type, intensity) : dict&lt;br&gt;+ clear_attacks() : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-413" vertex="1">
           <mxGeometry y="52" width="320" height="75" as="geometry" />
         </mxCell>
         <mxCell id="5D50KN5zPrAvzWpnFaVA-415" value="«APIRouter»&lt;br&gt;&lt;b&gt;RLPolicyRouter&lt;/b&gt; {prefix=/api/rl}" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;verticalAlign=top;spacingTop=2;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="40" y="825" width="320" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-416" value="+ get_rl_action(state) : dict&lt;br&gt;+ get_policy_status() : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-415" vertex="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-416" value="+ get_rl_action(state) : dict&lt;br&gt;+ get_policy_status() : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-415" vertex="1">
           <mxGeometry y="52" width="320" height="75" as="geometry" />
         </mxCell>
         <mxCell id="5D50KN5zPrAvzWpnFaVA-417" value="«APIRouter»&lt;br&gt;&lt;b&gt;SensorRouter&lt;/b&gt; {prefix=/api/sensors}" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;verticalAlign=top;spacingTop=2;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="380" y="70" width="310" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-418" value="+ get_sensor_profiles() : List[dict]&lt;br&gt;+ set_degradation(params) : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-417" vertex="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-418" value="+ get_sensor_profiles() : List[dict]&lt;br&gt;+ set_degradation(params) : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-417" vertex="1">
           <mxGeometry y="52" width="310" height="75" as="geometry" />
         </mxCell>
         <mxCell id="5D50KN5zPrAvzWpnFaVA-419" value="«APIRouter»&lt;br&gt;&lt;b&gt;EnvironmentRouter&lt;/b&gt; {prefix=/api/env}" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;verticalAlign=top;spacingTop=2;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="380" y="215" width="310" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-420" value="+ set_weather(wind, turbulence) : dict&lt;br&gt;+ get_environment() : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-419" vertex="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-420" value="+ set_weather(wind, turbulence) : dict&lt;br&gt;+ get_environment() : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-419" vertex="1">
           <mxGeometry y="52" width="310" height="75" as="geometry" />
         </mxCell>
         <mxCell id="5D50KN5zPrAvzWpnFaVA-421" value="«APIRouter»&lt;br&gt;&lt;b&gt;EvasionRouter&lt;/b&gt; {prefix=/api/evasion}" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;verticalAlign=top;spacingTop=2;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="380" y="360" width="310" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-422" value="+ compute_setpoint(pos, threat) : Vector3&lt;br&gt;+ set_evasion_mode(mode) : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-421" vertex="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-422" value="+ compute_setpoint(pos, threat) : Vector3&lt;br&gt;+ set_evasion_mode(mode) : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-421" vertex="1">
           <mxGeometry y="52" width="310" height="75" as="geometry" />
         </mxCell>
         <mxCell id="5D50KN5zPrAvzWpnFaVA-423" value="«APIRouter»&lt;br&gt;&lt;b&gt;LoggerRouter&lt;/b&gt; {prefix=/api/logs}" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;verticalAlign=top;spacingTop=2;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="380" y="505" width="310" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-424" value="+ record_telemetry(data : dict) : dict&lt;br&gt;+ get_active_logs() : List[dict]" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-423" vertex="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-424" value="+ record_telemetry(data : dict) : dict&lt;br&gt;+ get_active_logs() : List[dict]" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-423" vertex="1">
           <mxGeometry y="52" width="310" height="75" as="geometry" />
         </mxCell>
         <mxCell id="5D50KN5zPrAvzWpnFaVA-425" value="«APIRouter»&lt;br&gt;&lt;b&gt;TelemetryAPIRouter&lt;/b&gt; {prefix=/api/telemetry}" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;verticalAlign=top;spacingTop=2;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="380" y="650" width="310" height="155" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-426" value="+ get_episodes() : List[dict]&lt;br&gt;+ get_episode_trajectory(id) : dict&lt;br&gt;+ get_metrics() : dict&lt;br&gt;+ export_csv(id) : StreamingResponse" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-425" vertex="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-426" value="+ get_episodes() : List[dict]&lt;br&gt;+ get_episode_trajectory(id) : dict&lt;br&gt;+ get_metrics() : dict&lt;br&gt;+ export_csv(id) : StreamingResponse" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-425" vertex="1">
           <mxGeometry y="52" width="310" height="100" as="geometry" />
         </mxCell>
         <mxCell id="5D50KN5zPrAvzWpnFaVA-427" value="&lt;b&gt;SimulationProcessManager&lt;/b&gt;" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;verticalAlign=top;spacingTop=2;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="1150" y="70" width="550" height="200" as="geometry" />
+          <mxGeometry x="1150" y="70" width="440" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-428" value="compose_process : subprocess.Popen&lt;br&gt;container_name : str = &amp;quot;intelliswarm&amp;quot;" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-427" vertex="1">
-          <mxGeometry y="52" width="550" height="55" as="geometry" />
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-428" value="compose_process : subprocess.Popen&lt;br&gt;container_name : str = &amp;quot;intelliswarm&amp;quot;" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-427" vertex="1">
+          <mxGeometry y="52" width="440" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-429" value="+ start_sandbox() : bool&lt;br&gt;+ stop_sandbox() : bool&lt;br&gt;+ execute_command(cmd : str) : str" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-427" vertex="1">
-          <mxGeometry y="107" width="550" height="90" as="geometry" />
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-429" value="+ start_sandbox() : bool&lt;br&gt;+ stop_sandbox() : bool&lt;br&gt;+ execute_command(cmd : str) : str" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-427" vertex="1">
+          <mxGeometry y="107" width="440" height="90" as="geometry" />
         </mxCell>
         <mxCell id="5D50KN5zPrAvzWpnFaVA-430" value="«ros_cache.py»&lt;br&gt;&lt;b&gt;_Cache&lt;/b&gt;" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;verticalAlign=top;spacingTop=2;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="1150" y="290" width="550" height="185" as="geometry" />
+          <mxGeometry x="1150" y="290" width="440" height="185" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-431" value="host : str = &amp;quot;localhost&amp;quot;&lt;br&gt;ws_port : int = 9090&lt;br&gt;global_state : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-430" vertex="1">
-          <mxGeometry y="52" width="550" height="65" as="geometry" />
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-431" value="host : str = &amp;quot;localhost&amp;quot;&lt;br&gt;ws_port : int = 9090&lt;br&gt;global_state : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-430" vertex="1">
+          <mxGeometry y="52" width="440" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-432" value="+ connect() : void&lt;br&gt;+ get_state() : dict&lt;br&gt;+ wait_for_ready() : bool" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-430" vertex="1">
-          <mxGeometry y="117" width="550" height="65" as="geometry" />
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-432" value="+ connect() : void&lt;br&gt;+ get_state() : dict&lt;br&gt;+ wait_for_ready() : bool" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-430" vertex="1">
+          <mxGeometry y="117" width="440" height="65" as="geometry" />
         </mxCell>
         <mxCell id="5D50KN5zPrAvzWpnFaVA-433" value="&lt;b&gt;SensorDrivenEvasionAI&lt;/b&gt;" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;verticalAlign=top;spacingTop=2;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="1150" y="495" width="550" height="205" as="geometry" />
+          <mxGeometry x="1150" y="495" width="440" height="205" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-434" value="k_attract : float = 1.0&lt;br&gt;k_repulse : float = 2.5&lt;br&gt;d0 : float = 15.0" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-433" vertex="1">
-          <mxGeometry y="52" width="550" height="65" as="geometry" />
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-434" value="k_attract : float = 1.0&lt;br&gt;k_repulse : float = 2.5&lt;br&gt;d0 : float = 15.0" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-433" vertex="1">
+          <mxGeometry y="52" width="440" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-435" value="+ compute_apf_force(pos, target, threats) : Vector3&lt;br&gt;+ clamp_speed(vel, max_v=8.0) : Vector3" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-433" vertex="1">
-          <mxGeometry y="117" width="550" height="85" as="geometry" />
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-435" value="+ compute_apf_force(pos, target, threats) : Vector3&lt;br&gt;+ clamp_speed(vel, max_v=8.0) : Vector3" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-433" vertex="1">
+          <mxGeometry y="117" width="440" height="85" as="geometry" />
         </mxCell>
         <mxCell id="5D50KN5zPrAvzWpnFaVA-436" value="«module»&lt;br&gt;&lt;b&gt;telemetry_api&lt;/b&gt;" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;verticalAlign=top;spacingTop=2;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="1150" y="720" width="550" height="225" as="geometry" />
+          <mxGeometry x="1150" y="720" width="440" height="225" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-437" value="+ create_episode() : int&lt;br&gt;+ end_episode(episode_id, outcome) : void&lt;br&gt;+ get_episodes(limit=50) : List[dict]&lt;br&gt;+ get_episode_trajectory(episode_id) : dict&lt;br&gt;+ get_summary_metrics() : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=15;" parent="5D50KN5zPrAvzWpnFaVA-436" vertex="1">
-          <mxGeometry y="52" width="550" height="170" as="geometry" />
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-437" value="+ create_episode() : int&lt;br&gt;+ end_episode(episode_id, outcome) : void&lt;br&gt;+ get_episodes(limit=50) : List[dict]&lt;br&gt;+ get_episode_trajectory(episode_id) : dict&lt;br&gt;+ get_summary_metrics() : dict" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;align=left;spacingLeft=8;fontSize=16;" parent="5D50KN5zPrAvzWpnFaVA-436" vertex="1">
+          <mxGeometry y="52" width="440" height="170" as="geometry" />
         </mxCell>
         <mxCell id="5D50KN5zPrAvzWpnFaVA-438" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;endFill=0;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=0;entryX=0.25;entryY=0;labelBackgroundColor=none;" parent="1" source="5D50KN5zPrAvzWpnFaVA-405" target="5D50KN5zPrAvzWpnFaVA-402" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -135,7 +135,7 @@
         <mxCell id="5D50KN5zPrAvzWpnFaVA-440" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;endFill=0;strokeColor=#000000;strokeWidth=1.5;exitX=1;exitY=0.5;entryX=0;entryY=0.4;labelBackgroundColor=none;" parent="1" source="5D50KN5zPrAvzWpnFaVA-417" target="5D50KN5zPrAvzWpnFaVA-402" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-441" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;endFill=0;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontFamily=Helvetica;fontColor=#000000;exitX=1;exitY=0.3;entryX=0.05;entryY=1;labelBackgroundColor=none;" parent="1" source="5D50KN5zPrAvzWpnFaVA-425" target="5D50KN5zPrAvzWpnFaVA-402" edge="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-441" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;endFill=0;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;fontColor=#000000;exitX=1;exitY=0.3;entryX=0.05;entryY=1;labelBackgroundColor=none;" parent="1" source="5D50KN5zPrAvzWpnFaVA-425" target="5D50KN5zPrAvzWpnFaVA-402" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="705" y="696" />
@@ -144,7 +144,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-442" value="«uses»" style="edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;endArrow=open;strokeColor=#000000;fontFamily=Helvetica;fontSize=13;fontColor=#000000;exitX=0.5;exitY=0;entryX=0.5;entryY=0;labelBackgroundColor=none;" parent="1" source="5D50KN5zPrAvzWpnFaVA-405" target="5D50KN5zPrAvzWpnFaVA-427" edge="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-442" value="«uses»" style="edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;endArrow=open;strokeColor=#000000;fontFamily=Helvetica;fontSize=15;fontColor=#000000;exitX=0.5;exitY=0;entryX=0.5;entryY=0;labelBackgroundColor=none;align=left;labelPosition=right;spacingLeft=10;verticalAlign=middle;" parent="1" source="5D50KN5zPrAvzWpnFaVA-405" target="5D50KN5zPrAvzWpnFaVA-427" edge="1">
           <mxGeometry x="0.35" relative="1" as="geometry">
             <mxPoint y="-10" as="offset" />
             <Array as="points">
@@ -153,7 +153,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-443" value="«uses»" style="edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;endArrow=open;strokeColor=#000000;strokeWidth=2;fontSize=15;fontFamily=Helvetica;fontColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=none;" parent="1" source="5D50KN5zPrAvzWpnFaVA-407" target="5D50KN5zPrAvzWpnFaVA-430" edge="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-443" value="«uses»" style="edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;endArrow=open;strokeColor=#000000;strokeWidth=2;fontSize=15;fontFamily=Helvetica;fontColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=8;spacingLeft=10;spacingRight=10;" parent="1" source="5D50KN5zPrAvzWpnFaVA-407" target="5D50KN5zPrAvzWpnFaVA-430" edge="1">
           <mxGeometry x="0.257" y="14" relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="370" y="295" />
@@ -164,10 +164,10 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-444" value="«uses»" style="edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;endArrow=open;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontFamily=Helvetica;fontColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=none;" parent="1" source="5D50KN5zPrAvzWpnFaVA-421" target="5D50KN5zPrAvzWpnFaVA-433" edge="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-444" value="«uses»" style="edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;endArrow=open;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;fontColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=8;spacingLeft=10;spacingRight=10;" parent="1" source="5D50KN5zPrAvzWpnFaVA-421" target="5D50KN5zPrAvzWpnFaVA-433" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-445" value="«delegates»" style="edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;endArrow=open;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontFamily=Helvetica;fontColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=none;" parent="1" source="5D50KN5zPrAvzWpnFaVA-425" target="5D50KN5zPrAvzWpnFaVA-436" edge="1">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-445" value="«delegates»" style="edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;endArrow=open;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;fontColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=8;spacingLeft=10;spacingRight=10;" parent="1" source="5D50KN5zPrAvzWpnFaVA-425" target="5D50KN5zPrAvzWpnFaVA-436" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>

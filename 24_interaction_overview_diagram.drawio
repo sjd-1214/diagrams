@@ -52,7 +52,7 @@
         <mxCell id="Oh6sBllilBP3NYJp15pv-576" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontColor=#000000;fontSize=17;strokeWidth=2;" value="&lt;b&gt;Mission Reset / Abort&lt;/b&gt;&lt;br&gt;ref sd SequenceCommand" vertex="1">
           <mxGeometry height="85" width="340" x="530" y="1074" as="geometry" />
         </mxCell>
-        <mxCell id="Oh6sBllilBP3NYJp15pv-577" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-573" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;startArrow=none;exitX=-0.015;exitY=0.505;exitDx=0;exitDy=0;fontFamily=Helvetica;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;exitPerimeter=0;" value="[breach or neutralized]">
+        <mxCell id="Oh6sBllilBP3NYJp15pv-577" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-573" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;startArrow=none;exitX=-0.015;exitY=0.505;exitDx=0;exitDy=0;fontFamily=Helvetica;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=8;fontSize=16;strokeWidth=2;exitPerimeter=0;spacingLeft=10;spacingRight=10;" value="[breach or neutralized]">
           <mxGeometry relative="1" x="0.397" y="24" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
@@ -63,7 +63,7 @@
             <mxPoint x="213.91" y="1068.75" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Oh6sBllilBP3NYJp15pv-578" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-573" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;startArrow=none;exitX=1.016;exitY=0.504;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;exitPerimeter=0;fontStyle=1;" target="Oh6sBllilBP3NYJp15pv-576" value="[abort or timeout]">
+        <mxCell id="Oh6sBllilBP3NYJp15pv-578" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-573" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;startArrow=none;exitX=1.016;exitY=0.504;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=8;fontSize=16;strokeWidth=2;exitPerimeter=0;fontStyle=1;spacingLeft=10;spacingRight=10;" target="Oh6sBllilBP3NYJp15pv-576" value="[abort or timeout]">
           <mxGeometry relative="1" x="0.5389" y="27" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>

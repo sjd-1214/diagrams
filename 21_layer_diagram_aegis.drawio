@@ -91,13 +91,13 @@
         <mxCell id="Oh6sBllilBP3NYJp15pv-502" value="&lt;b&gt;SQLiteDatabase&lt;/b&gt;&lt;br&gt;Telemetry Store" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-497" vertex="1">
           <mxGeometry x="1140" y="35" width="320" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="Oh6sBllilBP3NYJp15pv-503" value="REST / WebSocket" style="endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" parent="1" source="Oh6sBllilBP3NYJp15pv-475" target="Oh6sBllilBP3NYJp15pv-481" edge="1">
+        <mxCell id="Oh6sBllilBP3NYJp15pv-503" value="REST / WebSocket" style="endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;verticalAlign=middle;fontSize=16;strokeWidth=2;align=left;labelPosition=right;spacingLeft=10;" parent="1" source="Oh6sBllilBP3NYJp15pv-475" target="Oh6sBllilBP3NYJp15pv-481" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Oh6sBllilBP3NYJp15pv-504" value="control &amp; state" style="endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" parent="1" source="Oh6sBllilBP3NYJp15pv-481" target="Oh6sBllilBP3NYJp15pv-486" edge="1">
+        <mxCell id="Oh6sBllilBP3NYJp15pv-504" value="control &amp; state" style="endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;verticalAlign=middle;fontSize=16;strokeWidth=2;align=left;labelPosition=right;spacingLeft=10;" parent="1" source="Oh6sBllilBP3NYJp15pv-481" target="Oh6sBllilBP3NYJp15pv-486" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Oh6sBllilBP3NYJp15pv-505" value="actuation &amp; telemetry" style="endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" parent="1" source="Oh6sBllilBP3NYJp15pv-486" target="Oh6sBllilBP3NYJp15pv-497" edge="1">
+        <mxCell id="Oh6sBllilBP3NYJp15pv-505" value="actuation &amp; telemetry" style="endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;verticalAlign=middle;fontSize=16;strokeWidth=2;align=left;labelPosition=right;spacingLeft=10;" parent="1" source="Oh6sBllilBP3NYJp15pv-486" target="Oh6sBllilBP3NYJp15pv-497" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>

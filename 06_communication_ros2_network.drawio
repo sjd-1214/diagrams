@@ -37,7 +37,7 @@
         <mxCell id="5D50KN5zPrAvzWpnFaVA-330" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;strokeWidth=2;" value="&lt;b&gt;&lt;u&gt;:TelemetryDB&lt;/u&gt;&lt;/b&gt;" vertex="1">
           <mxGeometry height="75" width="240" x="1399" y="545" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-331" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-320" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;entryX=0.003;entryY=0.099;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=16;strokeWidth=2;entryPerimeter=0;exitX=0.539;exitY=-0.044;exitDx=0;exitDy=0;exitPerimeter=0;" target="5D50KN5zPrAvzWpnFaVA-322" value="1: publishLocalPosition()&lt;br&gt;2: publishStatus()">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-331" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-320" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;entryX=0.003;entryY=0.099;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=16;strokeWidth=2;entryPerimeter=0;exitX=0.539;exitY=-0.044;exitDx=0;exitDy=0;exitPerimeter=0;verticalAlign=bottom;spacingBottom=8;spacingLeft=10;spacingRight=10;" target="5D50KN5zPrAvzWpnFaVA-322" value="1: publishLocalPosition()&lt;br&gt;2: publishStatus()">
           <mxGeometry relative="1" x="-0.2" as="geometry">
             <mxPoint x="20" y="-14" as="offset" />
             <Array as="points">
@@ -48,7 +48,7 @@
             <mxPoint x="-273.5" y="138.09" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-332" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-320" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=16;strokeWidth=2;" target="5D50KN5zPrAvzWpnFaVA-323" value="3: publishGroundTruth()">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-332" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-320" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=16;strokeWidth=2;verticalAlign=bottom;spacingBottom=8;spacingLeft=10;spacingRight=10;" target="5D50KN5zPrAvzWpnFaVA-323" value="3: publishGroundTruth()">
           <mxGeometry relative="1" x="-0.0423" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
@@ -58,25 +58,25 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-333" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-323" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=16;strokeWidth=2;verticalAlign=top;spacingTop=4;" target="5D50KN5zPrAvzWpnFaVA-324" value="4: sendRawDetections(radar, eoir)">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-333" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-323" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=16;strokeWidth=2;verticalAlign=bottom;spacingTop=4;spacingBottom=8;spacingLeft=10;spacingRight=10;" target="5D50KN5zPrAvzWpnFaVA-324" value="4: sendRawDetections(radar, eoir)">
           <mxGeometry relative="1" x="0.1584" y="-11" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-334" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-324" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=16;strokeWidth=2;align=left;spacingLeft=12;labelPosition=right;" target="5D50KN5zPrAvzWpnFaVA-325" value="5: publishDetections(tracks)">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-334" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-324" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=16;strokeWidth=2;align=left;spacingLeft=10;labelPosition=right;verticalAlign=middle;" target="5D50KN5zPrAvzWpnFaVA-325" value="5: publishDetections(tracks)">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-335" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-325" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=0;exitY=0.8;entryX=0.5;entryY=1;fontFamily=Helvetica;fontSize=16;strokeWidth=2;" target="5D50KN5zPrAvzWpnFaVA-320" value="6: sendTrajectorySetpoint(setpoint)">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-335" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-325" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=0;exitY=0.8;entryX=0.5;entryY=1;fontFamily=Helvetica;fontSize=16;strokeWidth=2;verticalAlign=bottom;spacingBottom=8;spacingLeft=10;spacingRight=10;" target="5D50KN5zPrAvzWpnFaVA-320" value="6: sendTrajectorySetpoint(setpoint)">
           <mxGeometry relative="1" x="0.2" y="-12" as="geometry">
             <Array as="points">
               <mxPoint x="145" y="528" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-336" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-322" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=16;strokeWidth=2;" target="5D50KN5zPrAvzWpnFaVA-327" value="7: publishGlobalState(state)">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-336" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-322" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=16;strokeWidth=2;verticalAlign=bottom;spacingBottom=8;spacingLeft=10;spacingRight=10;" target="5D50KN5zPrAvzWpnFaVA-327" value="7: publishGlobalState(state)">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-337" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-322" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=0.5;exitY=1;entryX=1;entryY=0.3;fontFamily=Helvetica;fontSize=16;strokeWidth=2;jumpStyle=arc;jumpSize=10;align=left;spacingLeft=10;" target="5D50KN5zPrAvzWpnFaVA-326" value="8: aggregateStates()">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-337" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-322" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=0.5;exitY=1;entryX=1;entryY=0.3;fontFamily=Helvetica;fontSize=16;strokeWidth=2;jumpStyle=arc;jumpSize=10;align=left;spacingLeft=10;verticalAlign=bottom;spacingBottom=8;spacingRight=10;" target="5D50KN5zPrAvzWpnFaVA-326" value="8: aggregateStates()">
           <mxGeometry relative="1" x="-0.75" as="geometry">
             <mxPoint x="10" as="offset" />
             <Array as="points">
@@ -84,23 +84,23 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-338" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-325" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=0;exitY=0.3;entryX=1;entryY=0.7;fontFamily=Helvetica;fontSize=16;strokeWidth=2;" target="5D50KN5zPrAvzWpnFaVA-326" value="9: publishMissionStatus(status)">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-338" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-325" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=0;exitY=0.3;entryX=1;entryY=0.7;fontFamily=Helvetica;fontSize=16;strokeWidth=2;verticalAlign=bottom;spacingBottom=8;spacingLeft=10;spacingRight=10;" target="5D50KN5zPrAvzWpnFaVA-326" value="9: publishMissionStatus(status)">
           <mxGeometry relative="1" y="-14" as="geometry">
             <mxPoint y="-14" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-339" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-324" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=0.8;exitY=0;exitDx=0;exitDy=0;entryX=0.2;entryY=1;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=16;strokeWidth=2;" target="5D50KN5zPrAvzWpnFaVA-327" value="10: forwardDetections(tracks)">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-339" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-324" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=0.8;exitY=0;exitDx=0;exitDy=0;entryX=0.2;entryY=1;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=16;strokeWidth=2;verticalAlign=bottom;spacingBottom=8;spacingLeft=10;spacingRight=10;" target="5D50KN5zPrAvzWpnFaVA-327" value="10: forwardDetections(tracks)">
           <mxGeometry relative="1" x="0.001" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-340" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-327" style="endArrow=none;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;fontStyle=1;" target="5D50KN5zPrAvzWpnFaVA-328" value="11: sendWebSocketFrame(payload)">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-340" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-327" style="endArrow=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;fontStyle=1;verticalAlign=bottom;spacingBottom=8;spacingLeft=10;spacingRight=10;" target="5D50KN5zPrAvzWpnFaVA-328" value="11: sendWebSocketFrame(payload)">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-341" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-329" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=0;exitY=0.8;exitDx=0;exitDy=0;entryX=1;entryY=0.2;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=16;strokeWidth=2;" target="5D50KN5zPrAvzWpnFaVA-325" value="12: configureMission(bases)">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-341" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-329" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=0;exitY=0.8;exitDx=0;exitDy=0;entryX=1;entryY=0.2;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=16;strokeWidth=2;verticalAlign=bottom;spacingBottom=8;spacingLeft=10;spacingRight=10;" target="5D50KN5zPrAvzWpnFaVA-325" value="12: configureMission(bases)">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-342" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-326" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=0.5;exitY=1;entryX=0.5;entryY=1;fontFamily=Helvetica;fontSize=16;strokeWidth=2;" target="5D50KN5zPrAvzWpnFaVA-330" value="13: batchInsert(records)">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-342" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-326" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=0.5;exitY=1;entryX=0.5;entryY=1;fontFamily=Helvetica;fontSize=16;strokeWidth=2;align=left;labelPosition=right;spacingLeft=10;verticalAlign=middle;" target="5D50KN5zPrAvzWpnFaVA-330" value="13: batchInsert(records)">
           <mxGeometry relative="1" x="0.0016" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
@@ -109,7 +109,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="5D50KN5zPrAvzWpnFaVA-343" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-329" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=16;strokeWidth=2;align=left;spacingLeft=15;labelPosition=right;" target="5D50KN5zPrAvzWpnFaVA-330" value="14: queryEpisode(episodeID)">
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-343" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-329" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=16;strokeWidth=2;align=left;spacingLeft=10;labelPosition=right;verticalAlign=middle;" target="5D50KN5zPrAvzWpnFaVA-330" value="14: queryEpisode(episodeID)">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
