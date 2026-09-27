@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Use Case Diagram: System Architecture &amp; Stakeholder Interactions" id="yHc_-E5KIfxNISrc30a3">
+    <mxGraphModel dx="3535" dy="2065" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" background="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Oh6sBllilBP3NYJp15pv-581" parent="1" style="text;html=1;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;fontSize=22;fillColor=none;" value="&lt;b&gt;Flow Diagram: Defender Policy Training Pipeline&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="1400" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-582" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontColor=#000000;fontSize=17;strokeWidth=2;" value="Record Human Demonstrations" vertex="1">
+          <mxGeometry height="70" width="460" x="100" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-583" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontColor=#000000;fontSize=17;strokeWidth=2;" value="Extract (State, Action) Pairs" vertex="1">
+          <mxGeometry height="70" width="460" x="100" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-584" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontColor=#000000;fontSize=17;strokeWidth=2;" value="Train Imitation Policy" vertex="1">
+          <mxGeometry height="70" width="460" x="100" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-585" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontColor=#000000;fontSize=17;strokeWidth=2;" value="Validate Policy Model" vertex="1">
+          <mxGeometry height="70" width="460" x="100" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-586" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontStyle=1;fontColor=#000000;fontSize=17;strokeWidth=2;" value="Metrics acceptable?" vertex="1">
+          <mxGeometry height="90" width="220" x="220" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-587" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontColor=#000000;fontSize=17;strokeWidth=2;" value="Adjust Dataset &amp;amp; Retrain" vertex="1">
+          <mxGeometry height="70" width="420" x="660" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-588" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontColor=#000000;fontSize=17;strokeWidth=2;" value="Serialize Policy Model" vertex="1">
+          <mxGeometry height="70" width="460" x="100" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-589" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontColor=#000000;fontSize=17;strokeWidth=2;" value="Host Policy Service" vertex="1">
+          <mxGeometry height="70" width="460" x="100" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-590" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontColor=#000000;fontSize=17;strokeWidth=2;" value="Stream Policy Predictions" vertex="1">
+          <mxGeometry height="70" width="460" x="100" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-591" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontColor=#000000;fontSize=17;strokeWidth=2;" value="Apply Defender Guidance" vertex="1">
+          <mxGeometry height="70" width="460" x="100" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-592" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-582" style="endArrow=block;html=1;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-583" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-593" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-583" style="endArrow=block;html=1;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-584" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-594" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-584" style="endArrow=block;html=1;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-585" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-595" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-585" style="endArrow=block;html=1;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-586" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-596" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-586" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontSize=13;fontColor=#000000;exitX=1;exitY=0.5;entryX=0.5;entryY=1;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-587" value="[No]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-597" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-587" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontSize=13;fontColor=#000000;exitX=0.5;exitY=0;entryX=1;entryY=0.5;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-584" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-598" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-586" style="endArrow=block;html=1;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" target="Oh6sBllilBP3NYJp15pv-588" value="[Yes]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-599" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-588" style="endArrow=block;html=1;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-589" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-600" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-589" style="endArrow=block;html=1;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-590" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-601" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-590" style="endArrow=block;html=1;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-591" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,106 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Use Case Diagram: System Architecture &amp; Stakeholder Interactions" id="yHc_-E5KIfxNISrc30a3">
+    <mxGraphModel dx="3535" dy="2065" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" background="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Oh6sBllilBP3NYJp15pv-506" parent="1" style="text;html=1;fontFamily=Helvetica;fontColor=#000000;fontSize=20;fontStyle=1;fillColor=none;" value="&lt;b&gt;Structure Chart: IntelliSwarm Decomposition&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="1200" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-507" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=Helvetica;fontColor=#000000;" value="&lt;b&gt;IntelliSwarm Master Orchestrator&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="360" x="520" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-508" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=14;fontFamily=Helvetica;fontColor=#000000;" value="&lt;b&gt;Simulation Lifecycle&lt;br&gt;Manager&lt;/b&gt;" vertex="1">
+          <mxGeometry height="65" width="250" x="40" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-509" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=14;fontFamily=Helvetica;fontColor=#000000;" value="&lt;b&gt;Attack Execution&lt;br&gt;Engine&lt;/b&gt;" vertex="1">
+          <mxGeometry height="65" width="250" x="370" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-510" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=14;fontFamily=Helvetica;fontColor=#000000;" value="&lt;b&gt;Active Swarm Control&lt;br&gt;(10 Hz Coordinator)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="65" width="260" x="700" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-511" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=14;fontFamily=Helvetica;fontColor=#000000;" value="&lt;b&gt;Database &amp;amp; Metrics&lt;br&gt;Log Manager&lt;/b&gt;" vertex="1">
+          <mxGeometry height="65" width="250" x="1030" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-512" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontFamily=Helvetica;fontColor=#000000;" value="Weather Controller&lt;br&gt;[speed, dir]" vertex="1">
+          <mxGeometry height="55" width="200" x="60" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-513" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontFamily=Helvetica;fontColor=#000000;" value="Airframe Hotswapper&lt;br&gt;[model_name]" vertex="1">
+          <mxGeometry height="55" width="200" x="60" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-514" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontFamily=Helvetica;fontColor=#000000;" value="Jamming Injector&lt;br&gt;[intensity]" vertex="1">
+          <mxGeometry height="55" width="200" x="390" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-515" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontFamily=Helvetica;fontColor=#000000;" value="GPS Spoofer&lt;br&gt;[offset]" vertex="1">
+          <mxGeometry height="55" width="200" x="390" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-516" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontFamily=Helvetica;fontColor=#000000;" value="FDI Corruptor&lt;br&gt;[fields]" vertex="1">
+          <mxGeometry height="55" width="200" x="390" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-517" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontFamily=Helvetica;fontColor=#000000;" value="DDoS Flooder&lt;br&gt;[packet_rate]" vertex="1">
+          <mxGeometry height="55" width="200" x="390" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-518" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontFamily=Helvetica;fontColor=#000000;" value="Sensor Fusion&lt;br&gt;[raw_detections]" vertex="1">
+          <mxGeometry height="55" width="210" x="725" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-519" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontFamily=Helvetica;fontColor=#000000;" value="Attacker Guidance&lt;br&gt;[APF + VO]" vertex="1">
+          <mxGeometry height="55" width="210" x="725" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-520" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontFamily=Helvetica;fontColor=#000000;" value="Defender Guidance&lt;br&gt;[Lead-Collision]" vertex="1">
+          <mxGeometry height="55" width="210" x="725" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-521" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontFamily=Helvetica;fontColor=#000000;" value="Reward Evaluator&lt;br&gt;[prev, curr]" vertex="1">
+          <mxGeometry height="55" width="200" x="1055" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-522" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontFamily=Helvetica;fontColor=#000000;" value="SQLite Batch Flusher&lt;br&gt;[batch_steps]" vertex="1">
+          <mxGeometry height="55" width="200" x="1055" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-523" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-507" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontFamily=Helvetica;fontColor=#000000;exitX=0;exitY=0.5;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-508" value="[args] start, stop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-524" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-507" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontFamily=Helvetica;fontColor=#000000;exitX=0.25;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-509" value="[scenario] trigger">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-525" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-507" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontFamily=Helvetica;fontColor=#000000;exitX=0.75;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-510" value="[params] execute">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-526" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-507" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontFamily=Helvetica;fontColor=#000000;exitX=1;exitY=0.5;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-511" value="[episodeID] log">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-527" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-508" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-512">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-528" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-512" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-513">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-529" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-509" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-514">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-530" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-514" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-515">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-531" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-515" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-516">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-532" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-516" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-517">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-533" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-510" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-518">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-534" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-518" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-519">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-535" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-519" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-520">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-536" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-511" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-521">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-537" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-521" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-522">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

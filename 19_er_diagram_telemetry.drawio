@@ -1,0 +1,105 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Use Case Diagram: System Architecture &amp; Stakeholder Interactions" id="yHc_-E5KIfxNISrc30a3">
+    <mxGraphModel dx="3535" dy="2065" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" background="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Oh6sBllilBP3NYJp15pv-412" parent="1" style="text;html=1;fontFamily=Helvetica;fontColor=#000000;fontSize=20;fontStyle=1;fillColor=none;" value="&lt;b&gt;Data Model: Telemetry Database Schema&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="1500" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-413" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=8;" value="&lt;b&gt;collisions&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;br&gt;* id : INTEGER &amp;lt;&amp;lt;PK&amp;gt;&amp;gt;&lt;br&gt;# episode_id : INTEGER &amp;lt;&amp;lt;FK&amp;gt;&amp;gt;&lt;br&gt;sim_time_s : REAL&lt;br&gt;attacker_id : TEXT&lt;br&gt;defender_id : TEXT&lt;br&gt;distance_m : REAL" vertex="1">
+          <mxGeometry height="170" width="340" x="220" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-414" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=8;" value="&lt;b&gt;episodes&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;br&gt;* id : INTEGER &amp;lt;&amp;lt;PK&amp;gt;&amp;gt;&lt;br&gt;start_time : TEXT&lt;br&gt;end_time : TEXT&lt;br&gt;outcome : TEXT&lt;br&gt;duration_s : REAL&lt;br&gt;mode : TEXT&lt;br&gt;weather : TEXT&lt;br&gt;attacker_base_x, attacker_base_y : REAL&lt;br&gt;defender_base_x, defender_base_y : REAL" vertex="1">
+          <mxGeometry height="220" width="360" x="720" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-415" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=8;" value="&lt;b&gt;attack_schedule&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;br&gt;* id : INTEGER &amp;lt;&amp;lt;PK&amp;gt;&amp;gt;&lt;br&gt;# episode_id : INTEGER &amp;lt;&amp;lt;FK&amp;gt;&amp;gt;&lt;br&gt;attack_type : TEXT&lt;br&gt;start_s : REAL&lt;br&gt;duration_s : REAL&lt;br&gt;intensity : REAL&lt;br&gt;target_team : TEXT" vertex="1">
+          <mxGeometry height="170" width="340" x="1240" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-416" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=8;" value="&lt;b&gt;timesteps&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;br&gt;* id : INTEGER &amp;lt;&amp;lt;PK&amp;gt;&amp;gt;&lt;br&gt;# episode_id : INTEGER &amp;lt;&amp;lt;FK&amp;gt;&amp;gt;&lt;br&gt;sim_time_s : REAL&lt;br&gt;wall_time : TEXT&lt;br&gt;weather_severity : REAL&lt;br&gt;wind_speed_ms : REAL&lt;br&gt;wind_direction_deg : REAL&lt;br&gt;turbulence_pct : REAL" vertex="1">
+          <mxGeometry height="200" width="360" x="720" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-417" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=8;" value="&lt;b&gt;drone_states&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;br&gt;*# timestep_id : INTEGER &amp;lt;&amp;lt;PK,FK&amp;gt;&amp;gt;&lt;br&gt;* drone_id : TEXT &amp;lt;&amp;lt;PK&amp;gt;&amp;gt;&lt;br&gt;x, y, z : REAL&lt;br&gt;vx, vy, vz : REAL&lt;br&gt;heading, pitch, roll : REAL&lt;br&gt;agl : REAL&lt;br&gt;agl_valid : INTEGER&lt;br&gt;stale : INTEGER" vertex="1">
+          <mxGeometry height="210" width="320" x="40" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-418" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=8;" value="&lt;b&gt;fused_tracks&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;br&gt;*# timestep_id : INTEGER &amp;lt;&amp;lt;PK,FK&amp;gt;&amp;gt;&lt;br&gt;* observer_team : TEXT &amp;lt;&amp;lt;PK&amp;gt;&amp;gt;&lt;br&gt;* target_id : TEXT &amp;lt;&amp;lt;PK&amp;gt;&amp;gt;&lt;br&gt;observer_id : TEXT &lt;i&gt;(NULL=team, id=own)&lt;/i&gt;&lt;br&gt;est_x, est_y, est_z : REAL&lt;br&gt;est_vx, est_vy, est_vz : REAL&lt;br&gt;sigma_pos : REAL&lt;br&gt;confidence : REAL" vertex="1">
+          <mxGeometry height="210" width="330" x="390" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-419" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=8;" value="&lt;b&gt;mission_states&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;br&gt;*# timestep_id : INTEGER &amp;lt;&amp;lt;PK,FK&amp;gt;&amp;gt;&lt;br&gt;mission_status : TEXT&lt;br&gt;winner : TEXT&lt;br&gt;attackers_alive, attackers_destroyed : INT&lt;br&gt;defenders_alive, defenders_destroyed : INT&lt;br&gt;target_zone_breached : INTEGER&lt;br&gt;defender_guidance : TEXT&lt;br&gt;rl_action_fraction : REAL&lt;br&gt;rl_fraction_d1, rl_fraction_d2 : REAL&lt;br&gt;targeting : TEXT" vertex="1">
+          <mxGeometry height="230" width="350" x="750" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-420" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=8;" value="&lt;b&gt;threat_assessments&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;br&gt;*# timestep_id : INTEGER &amp;lt;&amp;lt;PK,FK&amp;gt;&amp;gt;&lt;br&gt;threat_level : TEXT&lt;br&gt;tactical_assessment : TEXT&lt;br&gt;attack_pattern_confidence : REAL&lt;br&gt;highest_priority_target : INTEGER&lt;br&gt;unassigned_count : INTEGER" vertex="1">
+          <mxGeometry height="190" width="320" x="1130" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-421" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=8;" value="&lt;b&gt;attack_conditions&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;br&gt;*# timestep_id : INTEGER &amp;lt;&amp;lt;PK,FK&amp;gt;&amp;gt;&lt;br&gt;attack_id : TEXT&lt;br&gt;attack_type : TEXT&lt;br&gt;is_active : INTEGER&lt;br&gt;intensity : REAL&lt;br&gt;affected_drones : TEXT (JSON array)&lt;br&gt;degradation_active : INTEGER&lt;br&gt;confidence_multiplier : REAL" vertex="1">
+          <mxGeometry height="210" width="320" x="1480" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-422" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=8;" value="&lt;b&gt;actions&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;br&gt;*# timestep_id : INTEGER &amp;lt;&amp;lt;PK,FK&amp;gt;&amp;gt;&lt;br&gt;* drone_id : TEXT &amp;lt;&amp;lt;PK,FK&amp;gt;&amp;gt;&lt;br&gt;setpoint_x, setpoint_y, setpoint_z : REAL&lt;br&gt;setpoint_vx, setpoint_vy, setpoint_vz : REAL&lt;br&gt;setpoint_yaw : REAL" vertex="1">
+          <mxGeometry height="180" width="320" x="40" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-423" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=8;" value="&lt;b&gt;rewards&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;br&gt;*# timestep_id : INTEGER &amp;lt;&amp;lt;PK,FK&amp;gt;&amp;gt;&lt;br&gt;* drone_id : TEXT &amp;lt;&amp;lt;PK,FK&amp;gt;&amp;gt;&lt;br&gt;reward : REAL&lt;br&gt;distance_reward : REAL&lt;br&gt;neutralization_reward : REAL&lt;br&gt;time_penalty : REAL" vertex="1">
+          <mxGeometry height="180" width="330" x="390" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-424" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=8;" value="&lt;b&gt;drone_status&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;br&gt;*# timestep_id : INTEGER &amp;lt;&amp;lt;PK,FK&amp;gt;&amp;gt;&lt;br&gt;* drone_id : TEXT &amp;lt;&amp;lt;PK,FK&amp;gt;&amp;gt;&lt;br&gt;battery_pct : REAL&lt;br&gt;armed : INTEGER&lt;br&gt;nav_mode : TEXT" vertex="1">
+          <mxGeometry height="170" width="350" x="750" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-425" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=8;" value="&lt;b&gt;threats&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;br&gt;*# timestep_id : INTEGER &amp;lt;&amp;lt;PK,FK&amp;gt;&amp;gt;&lt;br&gt;* target_id : INTEGER &amp;lt;&amp;lt;PK&amp;gt;&amp;gt;&lt;br&gt;priority_score : REAL&lt;br&gt;distance_to_objective : REAL&lt;br&gt;velocity_toward_objective : REAL&lt;br&gt;time_to_objective_seconds : REAL&lt;br&gt;detection_confidence : REAL&lt;br&gt;classification : TEXT" vertex="1">
+          <mxGeometry height="200" width="320" x="1130" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-426" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=8;" value="&lt;b&gt;attack_realized&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;br&gt;*# timestep_id : INTEGER &amp;lt;&amp;lt;PK,FK&amp;gt;&amp;gt;&lt;br&gt;* target_drone : TEXT &amp;lt;&amp;lt;PK&amp;gt;&amp;gt;&lt;br&gt;degraded_state : TEXT&lt;br&gt;packet_loss_pct : REAL&lt;br&gt;latency_ms : REAL&lt;br&gt;spoofed_offset_m : REAL" vertex="1">
+          <mxGeometry height="190" width="320" x="1480" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-427" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-414" style="endArrow=ERmany;strokeColor=#000000;fontFamily=Helvetica;fontSize=13;fontColor=#000000;exitX=0;exitY=0.5;entryX=1;entryY=0.5;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-413" value="0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-428" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-414" style="endArrow=ERmany;strokeColor=#000000;fontFamily=Helvetica;fontSize=13;fontColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-415" value="0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-429" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-414" style="endArrow=ERmany;strokeColor=#000000;fontFamily=Helvetica;fontSize=13;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-416" value="1..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-430" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-416" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=ERmany;strokeColor=#000000;fontFamily=Helvetica;fontSize=12;fontColor=#000000;exitX=0;exitY=0.5;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-417" value="1..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-431" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-416" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=ERmany;strokeColor=#000000;fontFamily=Helvetica;fontSize=12;fontColor=#000000;exitX=0.2;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-418" value="0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-432" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-416" style="endArrow=ERone;strokeColor=#000000;fontFamily=Helvetica;fontSize=12;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-419" value="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-433" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-416" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=ERone;strokeColor=#000000;fontFamily=Helvetica;fontSize=12;fontColor=#000000;exitX=0.8;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-420" value="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-434" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-416" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=ERmany;strokeColor=#000000;fontFamily=Helvetica;fontSize=12;fontColor=#000000;exitX=1;exitY=0.5;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-421" value="0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-435" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-417" style="endArrow=ERmany;strokeColor=#000000;fontFamily=Helvetica;fontSize=12;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-422" value="1..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-436" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-417" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=ERmany;strokeColor=#000000;fontFamily=Helvetica;fontSize=12;fontColor=#000000;exitX=1;exitY=0.9;entryX=0;entryY=0.5;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-423" value="1..*">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="375" y="790" />
+              <mxPoint x="375" y="950" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-437" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-417" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=ERmany;strokeColor=#000000;fontFamily=Helvetica;fontSize=12;fontColor=#000000;exitX=0.9;exitY=1;entryX=0;entryY=0.5;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-424" value="1..*">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="328" y="835" />
+              <mxPoint x="735" y="835" />
+              <mxPoint x="735" y="945" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-438" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-420" style="endArrow=ERmany;strokeColor=#000000;fontFamily=Helvetica;fontSize=12;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-425" value="0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-439" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-421" style="endArrow=ERmany;strokeColor=#000000;fontFamily=Helvetica;fontSize=12;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-426" value="0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

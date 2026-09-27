@@ -1,0 +1,143 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Use Case Diagram: System Architecture &amp; Stakeholder Interactions" id="yHc_-E5KIfxNISrc30a3">
+    <mxGraphModel dx="3535" dy="2065" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" background="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Oh6sBllilBP3NYJp15pv-538" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontColor=#000000;fontSize=22;fontStyle=1;" value="&lt;b&gt;Level 1 Data Flow Diagram (DFD)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="353" x="772.5" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-539" parent="1" style="shape=rect;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontStyle=1;fontColor=#000000;fontSize=17;strokeWidth=2;" value="GCS Operator" vertex="1">
+          <mxGeometry height="60" width="220" x="363" y="373.75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-540" parent="1" style="shape=rect;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontStyle=1;fontColor=#000000;fontSize=17;strokeWidth=2;" value="Gazebo Physics" vertex="1">
+          <mxGeometry height="60" width="206" x="359" y="631.25" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-541" parent="1" style="shape=rect;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontStyle=1;fontColor=#000000;fontSize=17;strokeWidth=2;" value="RL Trainer" vertex="1">
+          <mxGeometry height="60" width="220" x="349" y="929.25" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-542" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontStyle=1;fontColor=#000000;fontSize=17;strokeWidth=2;" value="P1: Aggregate Telemetry" vertex="1">
+          <mxGeometry height="65" width="260" x="879" y="371.25" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-543" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontStyle=1;fontColor=#000000;fontSize=17;strokeWidth=2;" value="P2: Fuse Sensor Data" vertex="1">
+          <mxGeometry height="65" width="260" x="819" y="501.25" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-544" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontStyle=1;fontColor=#000000;fontSize=17;strokeWidth=2;" value="P3: Compute Guidance" vertex="1">
+          <mxGeometry height="65" width="260" x="819" y="641.25" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-545" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontStyle=1;fontColor=#000000;fontSize=17;strokeWidth=2;" value="P4: Log Flight Metrics &amp;amp; Step Rewards" vertex="1">
+          <mxGeometry height="65" width="419" x="653" y="843.25" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-546" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontStyle=1;fontColor=#000000;fontSize=17;strokeWidth=2;" value="P5: Manage Container&#10;&amp; Commands (FastAPI)" vertex="1">
+          <mxGeometry height="65" width="260" x="1239" y="371.25" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-547" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;align=center;fontColor=#000000;fontSize=17;strokeWidth=2;" value="D1: SQLite Telemetry DB" vertex="1">
+          <mxGeometry height="85" width="260" x="1359" y="833.25" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-548" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-542" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;startArrow=none;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" target="Oh6sBllilBP3NYJp15pv-539" value="&lt;b&gt;Global Swarm State&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-549" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-540" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;startArrow=none;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.7;entryDx=0;entryDy=0;fontFamily=Helvetica;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" target="Oh6sBllilBP3NYJp15pv-542" value="&lt;b&gt;Raw Position &amp;amp; Status&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="469" y="631.3" />
+              <mxPoint x="469" y="467.91" />
+              <mxPoint x="729" y="467.91" />
+              <mxPoint x="729" y="416.79" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-550" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-540" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;startArrow=none;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" target="Oh6sBllilBP3NYJp15pv-543" value="&lt;b&gt;Target Coordinates&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-551" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-543" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;startArrow=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;fontStyle=1;" target="Oh6sBllilBP3NYJp15pv-544" value="Estimated Tracks">
+          <mxGeometry relative="1" x="0.0059" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-552" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;fontSize=16;fontFamily=Helvetica;fontColor=#000000;exitX=1;exitY=0.5;fontStyle=1;entryX=0.879;entryY=-0.027;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-545" value="Fused Tracks">
+          <mxGeometry relative="1" x="0.1476" y="-3" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1099.8600000000001" y="524.25" />
+              <mxPoint x="1099.8600000000001" y="777.73" />
+              <mxPoint x="1021.27" y="777.73" />
+              <mxPoint x="1021.27" y="829.46" />
+            </Array>
+            <mxPoint x="1079.87" y="524.25" as="sourcePoint" />
+            <mxPoint x="1013" y="817.19" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-553" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-544" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;startArrow=none;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.7;entryDx=0;entryDy=0;fontFamily=Helvetica;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" target="Oh6sBllilBP3NYJp15pv-540" value="&lt;b&gt;Trajectory Setpoints&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="819.05" y="706.78" />
+              <mxPoint x="579.05" y="706.78" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-554" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-544" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;startArrow=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.633;entryY=-0.041;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" target="Oh6sBllilBP3NYJp15pv-545" value="&lt;b&gt;Commanded Actions&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="879" y="821.25" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-555" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;startArrow=none;entryX=0.3;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" target="Oh6sBllilBP3NYJp15pv-545" value="&lt;b&gt;Timestep State&lt;/b&gt;">
+          <mxGeometry relative="1" x="-0.755" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1140.69" y="399.05" />
+              <mxPoint x="1153.58" y="398.35" />
+              <mxPoint x="1153.58" y="801.25" />
+              <mxPoint x="880" y="801.25" />
+            </Array>
+            <mxPoint x="1139.0700000000002" y="399.06" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-556" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-545" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;startArrow=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" target="Oh6sBllilBP3NYJp15pv-547" value="&lt;b&gt;Batch Telemetry&lt;/b&gt;">
+          <mxGeometry relative="1" x="0.0002" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1343.02" y="875.76" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-557" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-539" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;startArrow=none;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" target="Oh6sBllilBP3NYJp15pv-546" value="&lt;b&gt;Flight Commands&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="469" y="310.94" />
+              <mxPoint x="1369" y="310.94" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-558" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-546" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;startArrow=none;entryX=0.8;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;exitX=0.51;exitY=1.029;exitDx=0;exitDy=0;exitPerimeter=0;" target="Oh6sBllilBP3NYJp15pv-540" value="&lt;b&gt;Process Control&lt;/b&gt;">
+          <mxGeometry relative="1" x="0.0667" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1371.6" y="491.27" />
+              <mxPoint x="523.79" y="491.27" />
+            </Array>
+            <mxPoint x="1372.55" y="450.12" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-559" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;startArrow=none;fontFamily=Helvetica;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" target="Oh6sBllilBP3NYJp15pv-546" value="Episode Query">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1462.1" y="749.69" />
+              <mxPoint x="1284.1" y="749.69" />
+            </Array>
+            <mxPoint x="1462.08" y="813.21" as="sourcePoint" />
+            <mxPoint x="1284.08" y="484.47" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-560" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-547" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;startArrow=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" target="Oh6sBllilBP3NYJp15pv-541" value="Trajectory Data">
+          <mxGeometry relative="1" x="0.0439" y="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1489" y="959.36" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

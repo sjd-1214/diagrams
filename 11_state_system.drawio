@@ -1,0 +1,190 @@
+<mxfile host="65bd71144e">
+  <diagram id="diag_11" name="State Machine Diagram: System Lifecycle">
+    <mxGraphModel dx="4358" dy="2360" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1950" pageHeight="1250" math="0" shadow="0" background="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header_title" value="&lt;b&gt;State Machine Diagram: Aegis Platform Lifecycle&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=18;fontFamily=Helvetica;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="40" y="20" width="1100" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="sys_start" value="" style="shape=ellipse;fillColor=#000000;strokeColor=#000000;aspect=fixed;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-120" y="178" width="22" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="STOPPED" value="&lt;b&gt;STOPPED&lt;/b&gt;&lt;br&gt;entry / releasePorts()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=11;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="-50" y="153" width="220" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="sys_stop" value="" style="shape=endState;fillColor=#000000;strokeColor=#000000;aspect=fixed;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-24" y="360" width="24" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="ERROR" value="&lt;b&gt;ERROR&lt;/b&gt;&lt;br&gt;entry / logDiagnostics()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=11;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="130" y="530" width="220" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="STARTING" value="&lt;b&gt;State: STARTING&lt;/b&gt;" style="swimlane;fontStyle=1;align=left;spacingLeft=12;verticalAlign=top;startSize=30;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;rounded=1;arcSize=8;fontSize=12;fontFamily=Helvetica;swimlaneFillColor=none;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="300" y="60" width="590" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_docker" value="&lt;b&gt;BootSandbox&lt;/b&gt;&lt;br&gt;entry / startSandbox()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=1.2;fontSize=10;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="STARTING" vertex="1">
+          <mxGeometry x="10" y="50" width="220" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_nodes" value="&lt;b&gt;VerifyNodes&lt;/b&gt;&lt;br&gt;entry / checkNodes()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=1.2;fontSize=10;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="STARTING" vertex="1">
+          <mxGeometry x="10" y="140" width="220" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_bridge" value="&lt;b&gt;ConnectBridge&lt;/b&gt;&lt;br&gt;do / verifyWebSocket()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=1.2;fontSize=10;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="STARTING" vertex="1">
+          <mxGeometry x="350" y="140" width="220" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="t_s3_s4" value="[wsPortOpen]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="STARTING" source="s1_bridge" target="s1_nodes" edge="1">
+          <mxGeometry x="-0.1111" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s1_dds" value="&lt;b&gt;ConnectDDS&lt;/b&gt;&lt;br&gt;do / pollHandshake()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=1.2;fontSize=10;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="STARTING" vertex="1">
+          <mxGeometry x="350" y="50" width="220" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="t_s1_s2" value="[containerReady]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="STARTING" source="s1_docker" target="s1_dds" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t_s2_s3" value="[ddsReady]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="STARTING" source="s1_dds" target="s1_bridge" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RUNNING" value="&lt;b&gt;State: RUNNING&lt;/b&gt;" style="swimlane;fontStyle=1;align=left;spacingLeft=12;verticalAlign=top;startSize=30;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;rounded=1;arcSize=8;fontSize=12;fontFamily=Helvetica;swimlaneFillColor=none;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1090" y="-70" width="580" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="MissionActive" value="&lt;b&gt;Substate: MissionActive&lt;/b&gt;" style="swimlane;fontStyle=1;align=left;spacingLeft=12;verticalAlign=top;startSize=30;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;rounded=1;arcSize=8;fontSize=12;fontFamily=Helvetica;swimlaneFillColor=none;fontColor=#000000;" parent="RUNNING" vertex="1">
+          <mxGeometry x="20" y="162.5" width="520" height="245" as="geometry" />
+        </mxCell>
+        <mxCell id="m_combat" value="&lt;b&gt;TacticalGuidance&lt;/b&gt;&lt;br&gt;do / executeGuidance()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=1.2;fontSize=10;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="MissionActive" vertex="1">
+          <mxGeometry x="290" y="48" width="210" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="m_armed" value="&lt;b&gt;Armed&lt;/b&gt;&lt;br&gt;entry / climbToAltitude()&lt;br&gt;do / verifyOffboard()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=1.2;fontSize=10;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="MissionActive" vertex="1">
+          <mxGeometry x="10" y="48" width="210" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t_arm_comb" value="[airborneStable]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="MissionActive" source="m_armed" target="m_combat" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="st_standby" value="&lt;b&gt;STANDBY&lt;/b&gt;&lt;br&gt;entry / awaitCommands()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=1.2;fontSize=10;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="RUNNING" vertex="1">
+          <mxGeometry x="140" y="46.5" width="240" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="t_sb_arm" value="startDuel() [basesSet]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;" parent="RUNNING" source="st_standby" target="m_armed" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="212" y="130" />
+              <mxPoint x="93" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m_eval" value="&lt;b&gt;EvaluateInterception&lt;/b&gt;&lt;br&gt;entry / checkKillRadius()&lt;br&gt;do / recordTelemetry()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=1.2;fontSize=10;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1180" y="385" width="280" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t_comb_eval" value="[step]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" parent="1" source="m_combat" target="m_eval" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t_eval_comb" value="[ongoing]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="m_eval" target="m_combat" edge="1">
+          <mxGeometry x="-0.421" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_eval_sb" value="[finished] / landAll()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.7;entryY=1;entryDx=0;entryDy=0;" parent="1" source="m_eval" target="st_standby" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1170" y="411" />
+              <mxPoint x="1170" y="250" />
+              <mxPoint x="1370" y="250" />
+              <mxPoint x="1370" y="32" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RESTARTING" value="&lt;b&gt;State: RESTARTING&lt;/b&gt;" style="swimlane;fontStyle=1;align=left;spacingLeft=12;verticalAlign=top;startSize=30;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;rounded=1;arcSize=8;fontSize=12;fontFamily=Helvetica;swimlaneFillColor=none;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="560" width="580" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="r_cfg" value="&lt;b&gt;UpdateModel&lt;/b&gt;&lt;br&gt;entry / updateModelXML()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=1.2;fontSize=10;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="RESTARTING" vertex="1">
+          <mxGeometry x="340" y="55" width="230" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="r_stop" value="&lt;b&gt;TerminateAutopilots&lt;/b&gt;&lt;br&gt;entry / stopFleet()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=1.2;fontSize=10;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="RESTARTING" vertex="1">
+          <mxGeometry x="20" y="55" width="230" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="t_r1_r2" value="[fleetStopped]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="RESTARTING" source="r_stop" target="r_cfg" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_spawn" value="&lt;b&gt;SpawnFleet&lt;/b&gt;&lt;br&gt;entry / launchInstances()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=1.2;fontSize=10;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="RESTARTING" vertex="1">
+          <mxGeometry x="340" y="230" width="230" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="t_r2_r3" value="[modelSaved]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RESTARTING" source="r_cfg" target="r_spawn" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_verify" value="&lt;b&gt;VerifyBindings&lt;/b&gt;&lt;br&gt;do / checkTopics()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=1.2;fontSize=10;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="725" width="230" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="t_r3_r4" value="[instancesReady]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="r_spawn" target="r_verify" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="STOPPING" value="&lt;b&gt;State: STOPPING&lt;/b&gt;" style="swimlane;fontStyle=1;align=left;spacingLeft=12;verticalAlign=top;startSize=30;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;rounded=1;arcSize=8;fontSize=12;fontFamily=Helvetica;swimlaneFillColor=none;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="380" y="560" width="580" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="p_land" value="&lt;b&gt;EmergencyLand&lt;/b&gt;&lt;br&gt;entry / commandLanding()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=1.2;fontSize=10;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="STOPPING" vertex="1">
+          <mxGeometry x="10" y="55" width="220" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="p_flush" value="&lt;b&gt;FlushBuffers&lt;/b&gt;&lt;br&gt;entry / commitRecords()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=1.2;fontSize=10;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="STOPPING" vertex="1">
+          <mxGeometry x="340" y="55" width="220" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="t_p1_p2" value="[landed]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="STOPPING" source="p_land" target="p_flush" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p_term" value="&lt;b&gt;TerminateSandbox&lt;/b&gt;&lt;br&gt;entry / stopSandbox()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=none;strokeColor=#000000;strokeWidth=1.2;fontSize=10;fontFamily=Helvetica;align=center;shadow=0;fontColor=#000000;" parent="STOPPING" vertex="1">
+          <mxGeometry x="200" y="190" width="240" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="t_p2_p3" value="[flushed]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" parent="STOPPING" source="p_flush" target="p_term" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_init" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" parent="1" source="sys_start" target="STOPPED" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_start" value="start()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;" parent="1" source="STOPPED" target="STARTING" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_operational" value="[isHealthy] / setOperational()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=2.0;endArrow=block;endFill=1;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" parent="1" source="STARTING" target="RUNNING" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_fail" value="[error] / logDiagnostics()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0.1;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" parent="1" source="STARTING" target="ERROR" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_reset" value="reset() / cleanup()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="ERROR" target="STOPPED" edge="1">
+          <mxGeometry x="-0.297" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="324" />
+              <mxPoint x="200" y="324" />
+              <mxPoint x="200" y="227" />
+              <mxPoint x="90" y="227" />
+              <mxPoint x="90" y="225" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_hotswap" value="switchAirframe(model) / initHotswap()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;" parent="1" source="RUNNING" target="RESTARTING" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_resume" value="[isReady] / resume()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0.7;exitY=0;exitDx=0;exitDy=0;entryX=0.7;entryY=1;entryDx=0;entryDy=0;" parent="1" source="RESTARTING" target="RUNNING" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_shutdown" value="stop() / triggerShutdown()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0;exitY=0.85;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" parent="1" source="RUNNING" target="STOPPING" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_idle" value="[isComplete] / setIdle()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="STOPPING" target="STOPPED" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="60" y="705" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_destroy" value="terminate() / destroy()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0.2;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="STOPPED" target="sys_stop" edge="1">
+          <mxGeometry x="0.2288" y="-4" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-6" y="227" />
+              <mxPoint y="227" />
+              <mxPoint y="360" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

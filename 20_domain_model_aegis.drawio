@@ -1,0 +1,156 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Use Case Diagram: System Architecture &amp; Stakeholder Interactions" id="yHc_-E5KIfxNISrc30a3">
+    <mxGraphModel dx="4385" dy="2065" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" background="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Oh6sBllilBP3NYJp15pv-440" parent="1" style="text;html=1;fontFamily=Helvetica;fontColor=#000000;fontSize=20;fontStyle=1;fillColor=none;" value="&lt;b&gt;Domain Model: IntelliSwarm Entities&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="1500" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-441" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="&lt;b&gt;Formation&lt;/b&gt;&lt;br&gt;&lt;hr&gt;name : string&lt;br&gt;spawn_spacing_m : number" vertex="1">
+          <mxGeometry height="90" width="210" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-442" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="&lt;b&gt;Drone&lt;/b&gt;&lt;br&gt;&lt;hr&gt;callsign : string&lt;br&gt;role : string&lt;br&gt;armed : boolean" vertex="1">
+          <mxGeometry height="105" width="220" x="425" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-443" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="&lt;b&gt;Mission&lt;/b&gt;&lt;br&gt;&lt;hr&gt;mission_id : string&lt;br&gt;status : string&lt;br&gt;max_duration_s : number" vertex="1">
+          <mxGeometry height="105" width="230" x="795" y="72.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-444" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="&lt;b&gt;Episode&lt;/b&gt;&lt;br&gt;&lt;hr&gt;episode_id : integer&lt;br&gt;outcome : string&lt;br&gt;start_time : string" vertex="1">
+          <mxGeometry height="105" width="220" x="1165" y="72.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-445" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="&lt;b&gt;Environment&lt;/b&gt;&lt;br&gt;&lt;hr&gt;wind_speed_ms : number&lt;br&gt;turbulence_pct : number" vertex="1">
+          <mxGeometry height="105" width="220" x="1556" y="72.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-446" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="&lt;b&gt;AttackerDrone&lt;/b&gt;&lt;br&gt;&lt;hr&gt;target_base : string" vertex="1">
+          <mxGeometry height="80" width="190" x="230" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-447" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="&lt;b&gt;DefenderDrone&lt;/b&gt;&lt;br&gt;&lt;hr&gt;defended_base : string" vertex="1">
+          <mxGeometry height="80" width="190" x="480" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-448" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="&lt;b&gt;Base&lt;/b&gt;&lt;br&gt;&lt;hr&gt;name : string&lt;br&gt;position_ned : Vector3&lt;br&gt;radius_m : number" vertex="1">
+          <mxGeometry height="100" width="220" x="898" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-449" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="&lt;b&gt;SensorProfile&lt;/b&gt;&lt;br&gt;&lt;hr&gt;name : string&lt;br&gt;max_range_m : number&lt;br&gt;fov_deg : number&lt;br&gt;sigma_pos_m : number" vertex="1">
+          <mxGeometry height="125" width="230" x="40" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-450" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="&lt;b&gt;GroundObserver&lt;/b&gt;&lt;br&gt;&lt;hr&gt;observer_id : &amp;quot;g1&amp;quot;&lt;br&gt;surveyed_pos : Vector3&lt;br&gt;is_fixed : boolean" vertex="1">
+          <mxGeometry height="110" width="230" x="420" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-451" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="&lt;b&gt;Detection&lt;/b&gt;&lt;br&gt;&lt;hr&gt;timestamp : number&lt;br&gt;sensor_type : string&lt;br&gt;measured_pos : Vector3&lt;br&gt;confidence : number" vertex="1">
+          <mxGeometry height="125" width="230" x="660" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-452" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="&lt;b&gt;FusedTrack&lt;/b&gt;&lt;br&gt;&lt;hr&gt;track_id : integer&lt;br&gt;est_pos : Vector3&lt;br&gt;est_vel : Vector3&lt;br&gt;sigma_pos : number&lt;br&gt;confidence : number&lt;br&gt;coasting : boolean" vertex="1">
+          <mxGeometry height="155" width="240" x="1036" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-453" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="&lt;b&gt;ThreatAssessment&lt;/b&gt;&lt;br&gt;&lt;hr&gt;threat_level : string&lt;br&gt;tactical_summary : string" vertex="1">
+          <mxGeometry height="100" width="240" x="1442" y="442.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-454" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="&lt;b&gt;Threat&lt;/b&gt;&lt;br&gt;&lt;hr&gt;priority_score : number&lt;br&gt;distance_to_base_m : number&lt;br&gt;time_to_impact_s : number" vertex="1">
+          <mxGeometry height="120" width="240" x="1442" y="605" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-455" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="&lt;b&gt;AttackSchedule&lt;/b&gt;&lt;br&gt;&lt;hr&gt;attack_type : string&lt;br&gt;start_s : number&lt;br&gt;duration_s : number&lt;br&gt;intensity : number" vertex="1">
+          <mxGeometry height="120" width="230" x="40" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-456" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="&lt;b&gt;CyberAttack&lt;/b&gt;&lt;br&gt;&lt;hr&gt;attack_type : string&lt;br&gt;is_active : boolean&lt;br&gt;degradation_factor : number" vertex="1">
+          <mxGeometry height="110" width="230" x="520" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-457" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-446" style="endArrow=block;endFill=0;strokeColor=#000000;strokeWidth=1.5;exitX=0.99;exitY=0.338;exitDx=0;exitDy=0;exitPerimeter=0;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="453.6" y="285.75" />
+            </Array>
+            <mxPoint x="442" y="271.63" as="sourcePoint" />
+            <mxPoint x="453.6" y="181.21" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-458" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-447" style="endArrow=block;endFill=0;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=0;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="575" y="182.05" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-459" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-441" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;strokeColor=#000000;fontFamily=Helvetica;fontSize=16;fontColor=#000000;labelBackgroundColor=none;fontStyle=1;" target="Oh6sBllilBP3NYJp15pv-442" value="1          organizes          1..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-460" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-442" style="endArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontSize=16;fontColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontStyle=1;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-443" value="1..*          engages          1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-461" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-443" style="endArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontSize=16;fontColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontStyle=1;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-444" value="1          records          1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-462" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-444" style="endArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontSize=16;fontColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontStyle=1;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-445" value="executes in">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-463" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-447" style="endArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontSize=16;fontColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontStyle=1;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-448" value="1..*     defends     1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-464" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-446" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontSize=16;fontColor=#000000;exitX=1;exitY=0.8;entryX=0;entryY=0.8;fontStyle=1;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-448" value="1..*     attacks     1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="324" />
+              <mxPoint x="450" y="360" />
+              <mxPoint x="750" y="360" />
+              <mxPoint x="750" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-465" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-442" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;strokeColor=#000000;fontFamily=Helvetica;fontSize=16;fontColor=#000000;entryX=0.48;entryY=0;fontStyle=1;exitX=0.001;exitY=0.818;exitDx=0;exitDy=0;exitPerimeter=0;labelBackgroundColor=none;" value="1   equipped with   1..*">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="161.9" />
+              <mxPoint x="280" y="219.08" />
+              <mxPoint x="150.4" y="219.08" />
+            </Array>
+            <mxPoint x="390.34" y="180.14" as="sourcePoint" />
+            <mxPoint x="150.4000000000001" y="434.06" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-466" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-450" style="endArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontSize=15;fontColor=#000000;exitX=0;exitY=0.5;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=4;fontStyle=1;entryX=1.002;entryY=0.449;entryDx=0;entryDy=0;entryPerimeter=0;" target="Oh6sBllilBP3NYJp15pv-449" value="1   equipped with   1..*">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="271.05" y="483.68" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-467" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-449" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontSize=13;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=1;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-451" value="1          generates          0..*">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="155" y="580" />
+              <mxPoint x="775" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-468" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-451" style="endArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontSize=16;fontColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=4;fontStyle=1;" target="Oh6sBllilBP3NYJp15pv-452" value="1..*     fused into     0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-469" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-452" style="endArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontSize=16;fontColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontStyle=1;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-453" value="0..*     assessed by     1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-470" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-453" style="endArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontSize=16;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontStyle=1;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-454" value="1     identifies     0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-471" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-454" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontSize=16;fontColor=#000000;exitX=0;exitY=0.25;entryX=0.5;entryY=1;exitDx=0;exitDy=0;fontStyle=1;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-446" value="0..*     evaluates     1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1294.11" y="640" />
+              <mxPoint x="1294.11" y="620.56" />
+              <mxPoint x="325" y="620.56" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-472" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-455" style="endArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Helvetica;fontSize=16;fontColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontStyle=1;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-456" value="0..*     schedules     1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-473" edge="1" parent="1" source="Oh6sBllilBP3NYJp15pv-456" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;strokeColor=#000000;fontFamily=Helvetica;fontSize=16;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontStyle=1;labelBackgroundColor=none;" target="Oh6sBllilBP3NYJp15pv-442" value="0..*     degrades     1..*">
+          <mxGeometry relative="1" x="0.0952" y="-4" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="455" y="790" />
+              <mxPoint x="60" y="790" />
+              <mxPoint x="60" y="65" />
+              <mxPoint x="450" y="65" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

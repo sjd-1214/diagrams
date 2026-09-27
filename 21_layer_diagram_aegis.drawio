@@ -1,0 +1,106 @@
+<mxfile host="65bd71144e">
+  <diagram name="Use Case Diagram: System Architecture &amp; Stakeholder Interactions" id="yHc_-E5KIfxNISrc30a3">
+    <mxGraphModel dx="1157" dy="871" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Oh6sBllilBP3NYJp15pv-474" value="&lt;b&gt;Layered Architecture: IntelliSwarm Platform&lt;/b&gt;" style="text;html=1;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;fontSize=22;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="40" y="20" width="1400" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-475" value="&lt;b&gt;Layer 1: UI / Presentation Layer&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=none;strokeColor=#000000;align=left;spacingLeft=15;verticalAlign=top;spacingTop=8;fontFamily=Helvetica;fontColor=#000000;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="40" y="70" width="1500" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-476" value="&lt;b&gt;GCS Web Dashboard&lt;/b&gt;&lt;br&gt;React 19 + TypeScript" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-475" vertex="1">
+          <mxGeometry x="30" y="45" width="250" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-477" value="&lt;b&gt;3D Tactical Map&lt;/b&gt;&lt;br&gt;MapLibre, Three.js &amp; Deck.gl" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-475" vertex="1">
+          <mxGeometry x="320" y="45" width="260" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-478" value="&lt;b&gt;Instrument Panel&lt;/b&gt;&lt;br&gt;Attitude, Altitude, Velocity, Battery" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-475" vertex="1">
+          <mxGeometry x="620" y="45" width="280" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-479" value="&lt;b&gt;Mission &amp; Attack Panels&lt;/b&gt;&lt;br&gt;Scenario, Weather &amp; Injection Controls" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-475" vertex="1">
+          <mxGeometry x="940" y="45" width="270" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-480" value="&lt;b&gt;Telemetry Console&lt;/b&gt;&lt;br&gt;API Metrics, LogTab &amp; Replay" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-475" vertex="1">
+          <mxGeometry x="1240" y="45" width="230" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-481" value="&lt;b&gt;Layer 2: Application Layer&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=none;strokeColor=#000000;align=left;spacingLeft=15;verticalAlign=top;spacingTop=8;fontFamily=Helvetica;fontColor=#000000;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="40" y="270" width="1500" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-482" value="&lt;b&gt;BackendAPIGateway&lt;/b&gt;&lt;br&gt;Subsystem Routers (:8000)" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-481" vertex="1">
+          <mxGeometry x="40" y="45" width="310" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-483" value="&lt;b&gt;SimulationProcessManager&lt;/b&gt;&lt;br&gt;Process Lifecycle API" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-481" vertex="1">
+          <mxGeometry x="400" y="45" width="310" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-484" value="&lt;b&gt;RosbridgeServer&lt;/b&gt;&lt;br&gt;WebSocket Gateway (:9090)" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-481" vertex="1">
+          <mxGeometry x="760" y="45" width="310" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-485" value="&lt;b&gt;RLPolicyServer&lt;/b&gt;&lt;br&gt;Policy Service (:8001)" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-481" vertex="1">
+          <mxGeometry x="1120" y="45" width="330" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-486" value="&lt;b&gt;Domain Layer&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=none;strokeColor=#000000;align=left;spacingLeft=15;verticalAlign=top;spacingTop=8;fontFamily=Helvetica;fontColor=#000000;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="40" y="470" width="1500" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-487" value="&lt;b&gt;SwarmCoordinator&lt;/b&gt;&lt;br&gt;Guidance &amp;amp; Intercept" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-486" vertex="1">
+          <mxGeometry x="30" y="45" width="220" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-488" value="&lt;b&gt;SensorFusionNode&lt;/b&gt;&lt;br&gt;Multi-Sensor Fusion" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-486" vertex="1">
+          <mxGeometry x="280" y="45" width="240" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-489" value="&lt;b&gt;ThreatAssessmentNode&lt;/b&gt;&lt;br&gt;Threat Scoring &amp;amp; Allocation" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-486" vertex="1">
+          <mxGeometry x="550" y="45" width="230" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-490" value="&lt;b&gt;MissionRulesNode&lt;/b&gt;&lt;br&gt;Mission Adjudication" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-486" vertex="1">
+          <mxGeometry x="810" y="45" width="220" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-491" value="&lt;b&gt;AttackConditionManager&lt;/b&gt;&lt;br&gt;Attack Injection Controller" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-486" vertex="1">
+          <mxGeometry x="1060" y="45" width="240" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-492" value="&lt;b&gt;SensorProfile &amp;amp; Suite&lt;/b&gt;&lt;br&gt;Sensor Specifications" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-486" vertex="1">
+          <mxGeometry x="30" y="135" width="250" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-493" value="&lt;b&gt;SensorDrivenEvasionAI&lt;/b&gt;&lt;br&gt;Attacker Evasion Policy" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-486" vertex="1">
+          <mxGeometry x="310" y="135" width="230" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-494" value="&lt;b&gt;SwarmStatePublisher&lt;/b&gt;&lt;br&gt;State Aggregator" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-486" vertex="1">
+          <mxGeometry x="570" y="135" width="240" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-495" value="&lt;b&gt;FormationEngine&lt;/b&gt;&lt;br&gt;Roster &amp;amp; Spacing" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-486" vertex="1">
+          <mxGeometry x="840" y="135" width="240" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-496" value="&lt;b&gt;EstimatorStrategy&lt;/b&gt;&lt;br&gt;Estimator Selection" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-486" vertex="1">
+          <mxGeometry x="1110" y="135" width="260" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-497" value="&lt;b&gt;Layer 4: Technical Services &amp; Infrastructure Layer (Physical Simulation &amp; Persistence)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=none;strokeColor=#000000;align=left;spacingLeft=15;verticalAlign=top;spacingTop=8;fontFamily=Helvetica;fontColor=#000000;fontSize=18;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="40" y="750" width="1500" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-498" value="&lt;b&gt;PX4AutopilotSITL (x4)&lt;/b&gt;&lt;br&gt;Flight Control Subsystem" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-497" vertex="1">
+          <mxGeometry x="30" y="45" width="250" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-499" value="&lt;b&gt;GazeboHarmonic&lt;/b&gt;&lt;br&gt;Physics Simulation" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-497" vertex="1">
+          <mxGeometry x="310" y="45" width="260" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-500" value="&lt;b&gt;MicroXRCE-DDSAgent&lt;/b&gt;&lt;br&gt;DDS Middleware Bridge" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-497" vertex="1">
+          <mxGeometry x="600" y="45" width="240" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-501" value="&lt;b&gt;TelemetryLoggerNode&lt;/b&gt;&lt;br&gt;Persistence Logger" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-497" vertex="1">
+          <mxGeometry x="870" y="45" width="240" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-502" value="&lt;b&gt;SQLiteDatabase&lt;/b&gt;&lt;br&gt;Telemetry Store" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=none;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;fontSize=16;strokeWidth=2;" parent="Oh6sBllilBP3NYJp15pv-497" vertex="1">
+          <mxGeometry x="1140" y="35" width="320" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-503" value="REST / WebSocket" style="endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" parent="1" source="Oh6sBllilBP3NYJp15pv-475" target="Oh6sBllilBP3NYJp15pv-481" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-504" value="control &amp; state" style="endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" parent="1" source="Oh6sBllilBP3NYJp15pv-481" target="Oh6sBllilBP3NYJp15pv-486" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-505" value="actuation &amp; telemetry" style="endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=3;fontSize=16;strokeWidth=2;" parent="1" source="Oh6sBllilBP3NYJp15pv-486" target="Oh6sBllilBP3NYJp15pv-497" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,246 @@
+<mxfile host="65bd71144e">
+  <diagram name="Use Case Diagram: System Architecture &amp; Stakeholder Interactions" id="yHc_-E5KIfxNISrc30a3">
+    <mxGraphModel dx="580" dy="1716" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Oh6sBllilBP3NYJp15pv-313" value="&lt;b&gt;Sequence Diagram: Cyber-Attack Injection &amp;amp; Threat Prioritization&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontColor=#000000;fontSize=22;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="-25" width="1100" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-314" value="&lt;b&gt;:GCS_Operator&lt;/b&gt;" style="shape=umlActor;html=1;outlineConnect=0;fillColor=none;strokeColor=#000000;strokeWidth=2;fontFamily=Helvetica;fontColor=#000000;fontSize=16;fontStyle=1;verticalLabelPosition=top;verticalAlign=bottom;spacingBottom=6;" parent="1" vertex="1">
+          <mxGeometry x="120" y="40" width="40" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-315" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;strokeColor=#000000;strokeWidth=1.5;dashed=1;fontSize=18;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="135" y="95" width="10" height="1195" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-316" value="&lt;b&gt;:Frontend_GCS&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontStyle=1;fontFamily=Helvetica;fontColor=#000000;fontSize=17;" parent="1" vertex="1">
+          <mxGeometry x="315" y="40" width="160" height="1250" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-317" value="&lt;b&gt;:FastAPI_Backend&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontStyle=1;fontFamily=Helvetica;fontColor=#000000;fontSize=17;" parent="1" vertex="1">
+          <mxGeometry x="525" y="40" width="210" height="1250" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-318" value="&lt;b&gt;:AttackManager&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontStyle=1;fontFamily=Helvetica;fontColor=#000000;fontSize=17;" parent="1" vertex="1">
+          <mxGeometry x="785" y="40" width="160" height="1250" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-319" value="&lt;b&gt;:SensorSuite_Fusion&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontStyle=1;fontFamily=Helvetica;fontColor=#000000;fontSize=17;" parent="1" vertex="1">
+          <mxGeometry x="995" y="40" width="210" height="1250" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-320" value="&lt;b&gt;:SwarmCoordinator&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontStyle=1;fontFamily=Helvetica;fontColor=#000000;fontSize=17;" parent="1" vertex="1">
+          <mxGeometry x="1255" y="40" width="160" height="1250" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-321" value="&lt;b&gt;:RosbridgeServer&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontStyle=1;fontFamily=Helvetica;fontColor=#000000;fontSize=17;" parent="1" vertex="1">
+          <mxGeometry x="1490" y="40" width="160" height="1250" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-322" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="387" y="175" width="16" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-323" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="622" y="223" width="16" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-324" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="622" y="269" width="16" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-325" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="857" y="311" width="16" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-326" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="857" y="357" width="16" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-327" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="857" y="640" width="16" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-328" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1092" y="682" width="16" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-329" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1092" y="728" width="16" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-330" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1092" y="774" width="16" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-331" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1327" y="820" width="16" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-332" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1327" y="1169" width="16" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-333" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1327" y="1215" width="16" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-334" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1327" y="1257" width="16" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-335" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1327" y="1299" width="16" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-336" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1562" y="1141" width="16" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-337" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="387" y="1187" width="16" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-338" value="&lt;b&gt;Phase 1: Attack Configuration (UC-05)&lt;/b&gt;" style="text;html=1;strokeColor=#000000;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontColor=#000000;rounded=1;strokeWidth=1;fontStyle=1;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="60" y="105" width="1650" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-339" value="1: selectAttack(type, params)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <mxPoint x="140" y="175" as="sourcePoint" />
+            <mxPoint x="387" y="175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-340" value="2: configureAttack(type, params)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <mxPoint x="403" y="223" as="sourcePoint" />
+            <mxPoint x="622" y="223" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-341" value="3: validateParams(params)" style="html=1;align=left;spacingLeft=5;endArrow=block;rounded=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="678" y="269" />
+              <mxPoint x="678" y="293" />
+            </Array>
+            <mxPoint x="638" y="269" as="sourcePoint" />
+            <mxPoint x="638" y="293" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-342" value="4: publishConditions(conditions)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry x="-0.0213" y="-19" height="36" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="638" y="311" as="sourcePoint" />
+            <mxPoint x="857" y="311" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-343" value="5: create(conditions)" style="html=1;align=left;spacingLeft=5;endArrow=block;rounded=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="913" y="357" />
+              <mxPoint x="913" y="381" />
+            </Array>
+            <mxPoint x="873" y="357" as="sourcePoint" />
+            <mxPoint x="873" y="381" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-344" value="6: bindCondition()" style="html=1;verticalAlign=bottom;endArrow=open;strokeColor=#000000;dashed=1;endFill=0;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <mxPoint x="857" y="399" as="sourcePoint" />
+            <mxPoint x="638" y="399" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-345" value="7: return status" style="html=1;verticalAlign=bottom;endArrow=open;strokeColor=#000000;dashed=1;endFill=0;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <mxPoint x="622" y="445" as="sourcePoint" />
+            <mxPoint x="403" y="445" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-346" value="8: displayIndicator()" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <mxPoint x="387" y="491" as="sourcePoint" />
+            <mxPoint x="140" y="491" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-347" value="&lt;b&gt;Phase 2: Attack Injection (Active Window)&lt;/b&gt;" style="text;html=1;strokeColor=#000000;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontColor=#000000;rounded=1;strokeWidth=1;fontStyle=1;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="60" y="540" width="1650" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-348" value="&lt;b&gt;loop Every simulation tick&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;width=260;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=8;fillColor=none;strokeColor=#000000;dashed=1;fontColor=#000000;fontFamily=Helvetica;fontStyle=1;fontSize=15;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="80" y="780" width="1620" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-349" value="9: [isActive] evaluateAttack()" style="html=1;align=left;spacingLeft=5;endArrow=block;rounded=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="913" y="640" />
+              <mxPoint x="913" y="664" />
+            </Array>
+            <mxPoint x="873" y="640" as="sourcePoint" />
+            <mxPoint x="873" y="664" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-350" value="10: [jamming] degradeDetections()" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <mxPoint x="873" y="682" as="sourcePoint" />
+            <mxPoint x="1092" y="682" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-351" value="11: [spoofing] injectGhostTrack()" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <mxPoint x="873" y="728" as="sourcePoint" />
+            <mxPoint x="1092" y="728" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-352" value="12: [fdi] corruptTelemetry()" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <mxPoint x="873" y="774" as="sourcePoint" />
+            <mxPoint x="1092" y="774" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-353" value="13: [ddos] dropSetpoints()" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <mxPoint x="873" y="820" as="sourcePoint" />
+            <mxPoint x="1327" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-354" value="&lt;b&gt;Phase 3: Threat Prioritization &amp;amp; Intercept&lt;/b&gt;" style="text;html=1;strokeColor=#000000;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontColor=#000000;rounded=1;strokeWidth=1;fontStyle=1;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="60" y="1090" width="1650" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-355" value="&lt;b&gt;loop Every guidance tick (10 Hz)&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;width=304;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=8;fillColor=none;strokeColor=#000000;dashed=1;fontColor=#000000;fontFamily=Helvetica;fontStyle=1;fontSize=15;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="80" y="935" width="1620" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-356" value="14: publishDetections(tracks)" style="html=1;verticalAlign=bottom;endArrow=open;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <mxPoint x="1108" y="1169" as="sourcePoint" />
+            <mxPoint x="1327" y="1169" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-357" value="15: computeThreatScores(tracks)" style="html=1;align=left;spacingLeft=5;endArrow=block;rounded=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1383" y="1215" />
+              <mxPoint x="1383" y="1239" />
+            </Array>
+            <mxPoint x="1343" y="1215" as="sourcePoint" />
+            <mxPoint x="1343" y="1239" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-358" value="16: assignDefenders(threats)" style="html=1;align=left;spacingLeft=5;endArrow=block;rounded=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1383" y="1257" />
+              <mxPoint x="1383" y="1281" />
+            </Array>
+            <mxPoint x="1343" y="1257" as="sourcePoint" />
+            <mxPoint x="1343" y="1281" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-359" value="17: generateSetpoints(assignments)" style="html=1;align=left;spacingLeft=5;endArrow=block;rounded=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1383" y="1299" />
+              <mxPoint x="1383" y="1323" />
+            </Array>
+            <mxPoint x="1343" y="1299" as="sourcePoint" />
+            <mxPoint x="1343" y="1323" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-360" value="18: publishStatus(assignments)" style="html=1;verticalAlign=bottom;endArrow=open;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry x="0.0213" y="-19" height="36" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="1343" y="1341" as="sourcePoint" />
+            <mxPoint x="1562" y="1341" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-361" value="19: sendFrame(status)" style="html=1;verticalAlign=bottom;endArrow=open;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <mxPoint x="1562" y="1187" as="sourcePoint" />
+            <mxPoint x="403" y="1187" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh6sBllilBP3NYJp15pv-362" value="20: updateThreatDisplay(status)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#000000;fontFamily=Helvetica;fontColor=#000000;labelBackgroundColor=none;spacingBottom=4;fontStyle=1;fontSize=17;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry height="36" relative="1" as="geometry">
+            <mxPoint x="387" y="1233" as="sourcePoint" />
+            <mxPoint x="140" y="1233" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

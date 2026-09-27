@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Use Case Diagram: System Architecture &amp; Stakeholder Interactions" id="yHc_-E5KIfxNISrc30a3">
+    <mxGraphModel dx="2357" dy="1377" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" background="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-475" parent="1" style="text;html=1;fontFamily=Helvetica;fontColor=#000000;fontSize=20;fontStyle=1;fillColor=none;" value="&lt;b&gt;State Machine Diagram: Drone Operational States&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="1100" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-476" parent="1" style="ellipse;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="24" width="24" x="40" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-477" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=13;fontFamily=Helvetica;fontColor=#000000;align=center;" value="&lt;b&gt;INIT&lt;/b&gt;&lt;br&gt;entry / runPrearmChecks()&lt;br&gt;do / streamHeartbeats()" vertex="1">
+          <mxGeometry height="125" width="220" x="60" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-478" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=15;verticalAlign=top;spacingTop=10;fontSize=15;fontFamily=Helvetica;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="580" width="1060" x="440" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-479" parent="1" style="text;html=1;fontSize=16;fontFamily=Helvetica;fontStyle=1;fontColor=#000000;align=left;verticalAlign=middle;fillColor=none;" value="&lt;b&gt;ARMED&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="120" x="495" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-480" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontFamily=Helvetica;fontColor=#000000;align=center;" value="&lt;b&gt;MANUAL&lt;/b&gt;&lt;br&gt;entry / manualOverride()" vertex="1">
+          <mxGeometry height="75" width="220" x="480" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-481" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="220" width="500" x="800" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-482" parent="1" style="text;html=1;fontSize=14;fontFamily=Helvetica;fontColor=#000000;fillColor=none;" value="&lt;b&gt;OFFBOARD&lt;/b&gt;" vertex="1">
+          <mxGeometry height="25" width="180" x="830" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-483" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontFamily=Helvetica;fontColor=#000000;align=center;" value="&lt;b&gt;TrajectoryControl&lt;/b&gt;&lt;br&gt;entry / activateTrajectory()&lt;br&gt;do / followSetpoints()&lt;br&gt;exit / holdPosition()" vertex="1">
+          <mxGeometry height="160" width="470" x="815" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-484" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="240" width="1010" x="465" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-485" parent="1" style="text;html=1;fontSize=14;fontFamily=Helvetica;fontColor=#000000;fillColor=none;" value="&lt;b&gt;LANDING&lt;/b&gt;" vertex="1">
+          <mxGeometry height="25" width="180" x="485" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-486" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontFamily=Helvetica;fontColor=#000000;align=center;" value="&lt;b&gt;Descending&lt;/b&gt;&lt;br&gt;entry / startDescent()&lt;br&gt;do / reduceAltitude()" vertex="1">
+          <mxGeometry height="80" width="340" x="450" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-487" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=13;fontFamily=Helvetica;fontColor=#000000;align=center;" value="&lt;b&gt;Touchdown&lt;/b&gt;&lt;br&gt;entry / cutThrottle()&lt;br&gt;do / verifyStop()" vertex="1">
+          <mxGeometry height="80" width="320" x="910" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-488" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=13;fontFamily=Helvetica;fontColor=#000000;align=center;" value="&lt;b&gt;DISARMED&lt;/b&gt;&lt;br&gt;entry / stopMotors()" vertex="1">
+          <mxGeometry height="85" width="220" x="60" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-489" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=13;fontFamily=Helvetica;fontColor=#000000;align=center;" value="&lt;b&gt;NEUTRALIZED&lt;/b&gt;&lt;br&gt;entry / terminateFlight()" vertex="1">
+          <mxGeometry height="75" width="380" x="480" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-490" parent="1" style="shape=ellipse;strokeWidth=2;fillColor=none;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="24" width="24" x="940" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-491" parent="1" style="shape=ellipse;fillColor=#000000;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="12" width="12" x="946" y="751" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-492" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-476" style="endArrow=block;strokeColor=#000000;strokeWidth=1.5;labelBackgroundColor=none;" target="5D50KN5zPrAvzWpnFaVA-477">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-493" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-477" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#000000;fontSize=12;fontFamily=Helvetica;fontColor=#000000;strokeWidth=1.5;exitX=1;exitY=0.5;entryX=0;entryY=0.5;verticalAlign=bottom;labelBackgroundColor=none;" target="5D50KN5zPrAvzWpnFaVA-480" value="arm(droneID) [prearmPassed] / startMotors()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-494" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-480" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#000000;fontSize=12;fontFamily=Helvetica;fontColor=#000000;strokeWidth=1.5;exitX=1;exitY=0.5;entryX=0;entryY=0.4;verticalAlign=bottom;labelBackgroundColor=none;" target="5D50KN5zPrAvzWpnFaVA-481" value="setOffboard(droneID) [heartbeatsValid]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-495" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-481" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontFamily=Helvetica;fontColor=#000000;exitX=0.5;exitY=1;entryX=0.75;entryY=0;labelBackgroundColor=none;" target="5D50KN5zPrAvzWpnFaVA-484" value="land(droneID) / startLanding()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-496" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-486" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontFamily=Helvetica;fontColor=#000000;exitX=0.5;exitY=1;entryX=0;entryY=0.5;labelBackgroundColor=none;" target="5D50KN5zPrAvzWpnFaVA-487" value="[touchdown] / cutThrottle()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-497" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-478" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontFamily=Helvetica;fontColor=#000000;exitX=0;exitY=0.82;entryX=1;entryY=0.5;verticalAlign=bottom;labelBackgroundColor=none;" target="5D50KN5zPrAvzWpnFaVA-488" value="[stopped] / stopMotors()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-498" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-488" style="endArrow=block;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontFamily=Helvetica;fontColor=#000000;exitX=0.5;exitY=0;entryX=0.5;entryY=1;labelBackgroundColor=none;" target="5D50KN5zPrAvzWpnFaVA-477" value="reset() / initSensors()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-499" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-478" style="endArrow=block;strokeColor=#000000;strokeWidth=1.5;fontSize=12;fontFamily=Helvetica;fontColor=#000000;exitX=0.25;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=none;" target="5D50KN5zPrAvzWpnFaVA-489" value="[neutralized] / forceLand()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5D50KN5zPrAvzWpnFaVA-500" edge="1" parent="1" source="5D50KN5zPrAvzWpnFaVA-489" style="endArrow=block;strokeColor=#000000;strokeWidth=1.5;labelBackgroundColor=none;" target="5D50KN5zPrAvzWpnFaVA-490">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
