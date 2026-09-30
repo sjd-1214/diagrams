@@ -1,311 +1,152 @@
 <mxfile host="65bd71144e">
     <diagram name="Use Case Diagram: System Architecture &amp; Stakeholder Interactions" id="yHc_-E5KIfxNISrc30a3">
-        <mxGraphModel dx="3376" dy="2368" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="56" dy="305" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1789" pageHeight="1180" background="none" math="0" shadow="0">
             <root>
-                <mxCell id="0" style=";"/>
-                <mxCell id="1" style=";" parent="0"/>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-2" value="&lt;b&gt;Operator&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;" parent="1" vertex="1">
-                    <mxGeometry x="-22" y="130" width="45" height="85" as="geometry"/>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="n1" value="&lt;b&gt;Use Case Diagram: IntelliSwarm Platform&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontColor=#000000;fontSize=26;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="22" width="900" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-3" value="&lt;b&gt;System Admin&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;" parent="1" vertex="1">
-                    <mxGeometry x="-22" y="358" width="45" height="85" as="geometry"/>
+                <mxCell id="n2" value="&lt;b&gt;IntelliSwarm Simulation Platform&lt;/b&gt;" style="shape=rect;html=1;whiteSpace=wrap;align=left;spacingLeft=18;verticalAlign=top;spacingTop=12;fontSize=21;fontFamily=Helvetica;fillColor=none;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="74" width="1220" height="1012" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-4" value="&lt;b&gt;Mission&lt;br&gt;&amp;nbsp;Commander&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;" parent="1" vertex="1">
-                    <mxGeometry x="-22" y="600" width="45" height="85" as="geometry"/>
+                <mxCell id="n3" value="&lt;b&gt;UC-01 Start Simulation Environment&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-01] Start Simulation Environment&#10;Priority: High | Criticality: Essential&#10;Trigger: Operator executes ./start.sh or clicks 'Start Simulation' in GCS&#10;Actors: Researcher/Operator&#10;Description: Operator starts full simulation stack: Docker, PX4 SITL (4 instances), Gazebo Harmonic, Micro XRCE DDS Agent, rosbridge, and ROS 2 nodes.">
+                    <mxGeometry x="400" y="120" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-5" value="&lt;b&gt;Data Analyst&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;" parent="1" vertex="1">
-                    <mxGeometry x="1787" y="290" width="45" height="85" as="geometry"/>
+                <mxCell id="n4" value="&lt;b&gt;UC-02 Stop Simulation Environment&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-02] Stop Simulation Environment&#10;Priority: High | Criticality: Essential&#10;Trigger: Operator clicks 'Stop' in GCS or runs ./start.sh stop&#10;Actors: Researcher/Operator&#10;Description: Operator gracefully stops simulation stack: lands active drones, terminates ROS 2 nodes and PX4 instances, shuts down Gazebo, removes Docker container.">
+                    <mxGeometry x="400" y="200" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-6" value="&lt;b&gt;Batch Runner&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=Helvetica;fontColor=#000000;fontStyle=1;" parent="1" vertex="1">
-                    <mxGeometry x="1716" y="740" width="45" height="85" as="geometry"/>
+                <mxCell id="n5" value="&lt;b&gt;UC-03 Switch Airframe Model&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-03] Switch Airframe Model&#10;Priority: Medium | Criticality: Important&#10;Trigger: Operator selects airframe from GCS dropdown (POST /api/sim/airframe)&#10;Actors: Researcher/Operator&#10;Description: Hot swaps drone airframe (x500, x500_mono_cam, iris, typhoon_h480) without full restart. Respawns PX4 instances with new model.">
+                    <mxGeometry x="400" y="280" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=0;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=0;labelBackgroundColor=none;" parent="1" source="5D50KN5zPrAvzWpnFaVA-3" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="1" y="255" as="targetPoint"/>
-                    </mxGeometry>
+                <mxCell id="n6" value="&lt;b&gt;UC-04 Place Bases and Spawn Swarm&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-04] Place Bases and Spawn Swarm&#10;Priority: High | Criticality: Essential&#10;Trigger: Operator clicks map to place bases, then clicks 'Confirm Bases'&#10;Actors: Researcher/Operator&#10;Description: Operator places attacker and defender base positions on GCS map (NED coordinates). Drones reposition to formation around bases.">
+                    <mxGeometry x="400" y="410" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=0;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=0;labelBackgroundColor=none;" parent="1" source="5D50KN5zPrAvzWpnFaVA-4" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="50" y="599.3333333333333" as="sourcePoint"/>
-                        <mxPoint y="481" as="targetPoint"/>
-                    </mxGeometry>
+                <mxCell id="n7" value="&lt;b&gt;UC-05 Configure Attack Scenario&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-05] Configure Attack Scenario&#10;Priority: High | Criticality: Essential&#10;Trigger: Operator selects attack parameters in GCS, or batch runner requests randomized condition&#10;Actors: Researcher/Operator&#10;Description: Configures active cyberattack condition: Jamming, GPS Spoofing, False Data Injection, or DDoS with intensity, radius, start time, and duration.">
+                    <mxGeometry x="400" y="490" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-9" value="&lt;b&gt;IntelliSwarm System&lt;/b&gt;" style="shape=rect;html=1;whiteSpace=wrap;align=left;spacingLeft=15;verticalAlign=top;spacingTop=10;fontSize=18;fontFamily=Helvetica;fillColor=none;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontStyle=1;" parent="1" vertex="1">
-                    <mxGeometry x="137" y="53" width="1464" height="946" as="geometry"/>
+                <mxCell id="n8" value="&lt;b&gt;UC-09 Set Weather Conditions&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-09] Set Weather Conditions&#10;Priority: Medium | Criticality: Important&#10;Trigger: Operator adjusts wind/weather sliders in EnvironmentTab&#10;Actors: Researcher/Operator&#10;Description: Configures wind speed and direction in Gazebo. Degrades EO/IR sensor detection probability proportionally (radar remains weather resistant).">
+                    <mxGeometry x="400" y="570" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-10" value="&lt;b&gt;UC-01: Start Simulation&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-01] Start Simulation Environment&#10;Priority: High | Criticality: Essential&#10;Trigger: Operator executes ./start.sh or clicks 'Start Simulation' in GCS&#10;Actors: Researcher/Operator&#10;Description: Operator starts full simulation stack: Docker, PX4 SITL (4 instances), Gazebo Harmonic, Micro XRCE DDS Agent, rosbridge, and ROS 2 nodes.">
-                    <mxGeometry x="240" y="130" width="270" height="60" as="geometry"/>
+                <mxCell id="n9" value="&lt;b&gt;UC-12 Manually Control Single Drone&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-12] Manually Control Single Drone&#10;Priority: Medium | Criticality: Important&#10;Trigger: Operator uses MissionControlTab manual flight controls&#10;Actors: Researcher/Operator&#10;Description: Manually arms, disarms, sends position setpoints, or lands individual drones outside of autonomous mission mode.">
+                    <mxGeometry x="400" y="650" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-11" value="&lt;b&gt;UC-02: Stop Simulation&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-02] Stop Simulation Environment&#10;Priority: High | Criticality: Essential&#10;Trigger: Operator clicks 'Stop' in GCS or runs ./start.sh stop&#10;Actors: Researcher/Operator&#10;Description: Operator gracefully stops simulation stack: lands active drones, terminates ROS 2 nodes and PX4 instances, shuts down Gazebo, removes Docker container.">
-                    <mxGeometry x="240" y="220" width="270" height="60" as="geometry"/>
+                <mxCell id="n10" value="&lt;b&gt;UC-06 Launch 2v2 Swarm Duel&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-06] Launch 2v2 Swarm Duel Mission&#10;Priority: High | Criticality: Essential&#10;Trigger: Operator clicks 'Start Duel' in SwarmDuelTab&#10;Actors: Researcher/Operator&#10;Description: Launches mission with 2 attackers vs 2 defenders. Arms 4 aircraft in OFFBOARD mode. SwarmCoordinator runs 10 Hz guidance loop using fused sensor tracks only.">
+                    <mxGeometry x="400" y="790" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-12" value="&lt;b&gt;UC-03: Switch Airframe&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-03] Switch Airframe Model&#10;Priority: Medium | Criticality: Important&#10;Trigger: Operator selects airframe from GCS dropdown (POST /api/sim/airframe)&#10;Actors: Researcher/Operator&#10;Description: Hot swaps drone airframe (x500, x500_mono_cam, iris, typhoon_h480) without full restart. Respawns PX4 instances with new model.">
-                    <mxGeometry x="618" y="179" width="275" height="60" as="geometry"/>
+                <mxCell id="n11" value="&lt;b&gt;UC-07 Launch 1v1 Attack Defend&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-07] Launch 1v1 Attack Defend Mission&#10;Priority: Medium | Criticality: Important&#10;Trigger: Operator clicks 'Start Mission' in MissionControlTab&#10;Actors: Researcher/Operator&#10;Description: Launches 1v1 mission (1 attacker vs 1 defender). Respawns aircraft at bases, arms, climbs to cruise altitude with setpoints streamed from GCS over WebSocket.">
+                    <mxGeometry x="400" y="870" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-13" value="&lt;b&gt;UC-04: Spawn Swarm&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-04] Place Bases and Spawn Swarm&#10;Priority: High | Criticality: Essential&#10;Trigger: Operator clicks map to place bases, then clicks 'Confirm Bases'&#10;Actors: Researcher/Operator&#10;Description: Operator places attacker and defender base positions on GCS map (NED coordinates). Drones reposition to formation around bases.">
-                    <mxGeometry x="240" y="355" width="270" height="60" as="geometry"/>
+                <mxCell id="n12" value="&lt;b&gt;UC-08 Abort or Reset Active Mission&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-08] Abort/Reset Active Mission&#10;Priority: High | Criticality: Essential&#10;Trigger: Operator clicks 'Reset Mission' or 'Stop'&#10;Actors: Researcher/Operator&#10;Description: Aborts active mission immediately. SwarmCoordinator stops guidance loop, publishes LAND command within 100ms, and resets mission state to idle.">
+                    <mxGeometry x="400" y="950" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-14" value="&lt;b&gt;UC-05: Configure Attack&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-05] Configure Attack Scenario&#10;Priority: High | Criticality: Essential&#10;Trigger: Operator selects attack parameters in GCS, or batch runner requests randomized condition&#10;Actors: Researcher/Operator&#10;Description: Configures active cyberattack condition: Jamming, GPS Spoofing, False Data Injection, or DDoS with intensity, radius, start time, and duration.">
-                    <mxGeometry x="240" y="450" width="270" height="60" as="geometry"/>
+                <mxCell id="n13" value="&lt;b&gt;UC-10 Monitor Live Swarm Telemetry&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-10] Monitor Live Swarm Telemetry&#10;Priority: High | Criticality: Essential&#10;Trigger: Continuous while GCS is open at localhost:5173&#10;Actors: Researcher/Operator&#10;Description: Real-time 3D drone positions, velocities, battery levels, and mission status at 10 Hz via rosbridge WebSocket (/swarm/global_state).">
+                    <mxGeometry x="1180" y="200" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-15" value="&lt;b&gt;UC-08: Abort Mission&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-08] Abort/Reset Active Mission&#10;Priority: High | Criticality: Essential&#10;Trigger: Operator clicks 'Reset Mission' or 'Stop'&#10;Actors: Researcher/Operator&#10;Description: Aborts active mission immediately. SwarmCoordinator stops guidance loop, publishes LAND command within 100ms, and resets mission state to idle.">
-                    <mxGeometry x="237" y="702" width="270" height="60" as="geometry"/>
+                <mxCell id="n14" value="&lt;b&gt;UC-11 View Fused Sensor Tracks&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-11] View Fused Sensor Tracks&#10;Priority: High | Criticality: Essential&#10;Trigger: Operator opens Sensor Panel in GCS&#10;Actors: Researcher/Operator&#10;Description: Displays fused sensor track overlay comparing estimated positions vs ground truth, radar/EO-IR detection ranges, and fusion uncertainty.">
+                    <mxGeometry x="1180" y="280" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-16" value="&lt;b&gt;UC-06: Launch Swarm Duel&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-06] Launch 2v2 Swarm Duel Mission&#10;Priority: High | Criticality: Essential&#10;Trigger: Operator clicks 'Start Duel' in SwarmDuelTab&#10;Actors: Researcher/Operator&#10;Description: Launches mission with 2 attackers vs 2 defenders. Arms 4 aircraft in OFFBOARD mode. SwarmCoordinator runs 10 Hz guidance loop using fused sensor tracks only.">
-                    <mxGeometry x="660" y="600" width="275" height="60" as="geometry"/>
+                <mxCell id="n15" value="&lt;b&gt;UC-14 Replay Logged Episode&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-14] Replay Logged Episode&#10;Priority: Medium | Criticality: Important&#10;Trigger: Operator selects past run from log browser&#10;Actors: Researcher/Operator&#10;Description: Replays recorded episode timeline in GCS. Reconstructs drone positions, sensor state, and events with scrub, pause, and speed controls.">
+                    <mxGeometry x="1180" y="360" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-17" value="&lt;b&gt;UC-07: Launch 1v1 Duel&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-07] Launch 1v1 Attack Defend Mission&#10;Priority: Medium | Criticality: Important&#10;Trigger: Operator clicks 'Start Mission' in MissionControlTab&#10;Actors: Researcher/Operator&#10;Description: Launches 1v1 mission (1 attacker vs 1 defender). Respawns aircraft at bases, arms, climbs to cruise altitude with setpoints streamed from GCS over WebSocket.">
-                    <mxGeometry x="319" y="540" width="275" height="60" as="geometry"/>
+                <mxCell id="n16" value="&lt;b&gt;UC-15 Query Logged Data by Filter&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-15] Query Logged Data by Filter&#10;Priority: Medium | Criticality: Important&#10;Trigger: Operator applies filter criteria in log browser&#10;Actors: Researcher/Operator&#10;Description: Queries database across multiple episodes filtered by attack type, outcome, or time range. Computes aggregate summary statistics.">
+                    <mxGeometry x="1180" y="440" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-18" value="&lt;b&gt;UC-09: Set Weather&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-09] Set Weather Conditions&#10;Priority: Medium | Criticality: Important&#10;Trigger: Operator adjusts wind/weather sliders in EnvironmentTab&#10;Actors: Researcher/Operator&#10;Description: Configures wind speed and direction in Gazebo. Degrades EO/IR sensor detection probability proportionally (radar remains weather resistant).">
-                    <mxGeometry x="230" y="850" width="270" height="60" as="geometry"/>
+                <mxCell id="n17" value="&lt;b&gt;UC-17 Evaluate Defender Performance&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-17] Evaluate Defender Performance&#10;Priority: Medium | Criticality: Important&#10;Trigger: Operator requests evaluation of specific defender agent&#10;Actors: Researcher/Operator&#10;Description: Evaluates RL-trained or rule-based defender against standardized held-out test scenarios. Outputs comparison metrics.">
+                    <mxGeometry x="1180" y="760" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-19" value="&lt;b&gt;UC-12: Control Drone&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-12] Manually Control Single Drone&#10;Priority: Medium | Criticality: Important&#10;Trigger: Operator uses MissionControlTab manual flight controls&#10;Actors: Researcher/Operator&#10;Description: Manually arms, disarms, sends position setpoints, or lands individual drones outside of autonomous mission mode.">
-                    <mxGeometry x="580" y="850" width="275" height="60" as="geometry"/>
+                <mxCell id="n18" value="&lt;b&gt;UC-18 Train RL Defender Agent&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-18] Train RL Defender Agent&#10;Priority: Medium | Criticality: Important&#10;Trigger: Training script invoked&#10;Actors: Batch Runner&#10;Description: Gymnasium-wrapped environment trains defender policy using PPO and Stable Baselines3. Defender observes only fused sensor data.">
+                    <mxGeometry x="1180" y="840" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-20" value="&lt;b&gt;UC-10: Monitor Telemetry&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-10] Monitor Live Swarm Telemetry&#10;Priority: High | Criticality: Essential&#10;Trigger: Continuous while GCS is open at localhost:5173&#10;Actors: Researcher/Operator&#10;Description: Real-time 3D drone positions, velocities, battery levels, and mission status at 10 Hz via rosbridge WebSocket (/swarm/global_state).">
-                    <mxGeometry x="980" y="130" width="275" height="60" as="geometry"/>
+                <mxCell id="n19" value="&lt;b&gt;UC-16 Run Headless Batch Episodes&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-16] Run Headless Batch Episodes&#10;Priority: Medium | Criticality: Important&#10;Trigger: Training script or operator requests N batch episodes&#10;Actors: Batch Runner&#10;Description: Automated script executes N episodes end-to-end on real PX4/Gazebo/ROS 2 stack in headless Docker with seeded scenarios and full logging.">
+                    <mxGeometry x="790" y="700" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-21" value="&lt;b&gt;UC-11: View Fused Tracks&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-11] View Fused Sensor Tracks&#10;Priority: High | Criticality: Essential&#10;Trigger: Operator opens Sensor Panel in GCS&#10;Actors: Researcher/Operator&#10;Description: Displays fused sensor track overlay comparing estimated positions vs ground truth, radar/EO-IR detection ranges, and fusion uncertainty.">
-                    <mxGeometry x="980" y="220" width="275" height="60" as="geometry"/>
+                <mxCell id="n20" value="&lt;b&gt;UC-13 Record Episode Telemetry&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=18;align=center;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-13] Record Episode Telemetry&#10;Priority: High | Criticality: Essential&#10;Trigger: Mission starts (auto log) or operator clicks 'Start Recording'&#10;Actors: Researcher/Operator&#10;Description: Telemetry_logger records mission events, 4-drone telemetry, fused tracks, attack conditions, and outcome into SQLite database at 10 Hz.">
+                    <mxGeometry x="790" y="830" width="300" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-22" value="&lt;b&gt;UC-13: Record Telemetry&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-13] Record Episode Telemetry&#10;Priority: High | Criticality: Essential&#10;Trigger: Mission starts (auto log) or operator clicks 'Start Recording'&#10;Actors: Researcher/Operator&#10;Description: Telemetry_logger records mission events, 4-drone telemetry, fused tracks, attack conditions, and outcome into SQLite database at 10 Hz.">
-                    <mxGeometry x="980" y="298" width="275" height="60" as="geometry"/>
+                <mxCell id="n21" value="&lt;b&gt;System Admin&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=19;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="190" width="50" height="95" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-23" value="&lt;b&gt;UC-14: Replay Episode&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-14] Replay Logged Episode&#10;Priority: Medium | Criticality: Important&#10;Trigger: Operator selects past run from log browser&#10;Actors: Researcher/Operator&#10;Description: Replays recorded episode timeline in GCS. Reconstructs drone positions, sensor state, and events with scrub, pause, and speed controls.">
-                    <mxGeometry x="980" y="409" width="275" height="60" as="geometry"/>
+                <mxCell id="n22" value="&lt;b&gt;Operator&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=19;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="520" width="50" height="95" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-24" value="&lt;b&gt;UC-15: Query Telemetry&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-15] Query Logged Data by Filter&#10;Priority: Medium | Criticality: Important&#10;Trigger: Operator applies filter criteria in log browser&#10;Actors: Researcher/Operator&#10;Description: Queries database across multiple episodes filtered by attack type, outcome, or time range. Computes aggregate summary statistics.">
-                    <mxGeometry x="980" y="500" width="275" height="60" as="geometry"/>
+                <mxCell id="n23" value="&lt;b&gt;Mission Commander&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=19;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="860" width="50" height="95" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-25" value="&lt;b&gt;UC-16: Run Batch Episodes&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-16] Run Headless Batch Episodes&#10;Priority: Medium | Criticality: Important&#10;Trigger: Training script or operator requests N batch episodes&#10;Actors: Batch Runner&#10;Description: Automated script executes N episodes end-to-end on real PX4/Gazebo/ROS 2 stack in headless Docker with seeded scenarios and full logging.">
-                    <mxGeometry x="974" y="740" width="275" height="60" as="geometry"/>
+                <mxCell id="n24" value="&lt;b&gt;Data Analyst&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=19;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1610" y="310" width="50" height="95" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-26" value="&lt;b&gt;UC-17: Evaluate Defender&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-17] Evaluate Defender Performance&#10;Priority: Medium | Criticality: Important&#10;Trigger: Operator requests evaluation of specific defender agent&#10;Actors: Researcher/Operator&#10;Description: Evaluates RL-trained or rule-based defender against standardized held-out test scenarios. Outputs comparison metrics.">
-                    <mxGeometry x="980" y="591" width="275" height="60" as="geometry"/>
+                <mxCell id="n25" value="&lt;b&gt;Batch Runner&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=19;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1610" y="790" width="50" height="95" as="geometry"/>
                 </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-27" value="&lt;b&gt;UC-18: Train RL Agent&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontFamily=Helvetica;align=center;fontColor=#000000;fontStyle=1;" parent="1" vertex="1" tooltip="[UC-18] Train RL Defender Agent&#10;Priority: Medium | Criticality: Important&#10;Trigger: Training script invoked&#10;Actors: Batch Runner&#10;Description: Gymnasium-wrapped environment trains defender policy using PPO and Stable Baselines3. Defender observes only fused sensor data.">
-                    <mxGeometry x="980" y="860" width="275" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-28" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;entryX=0;entryY=0.5;labelBackgroundColor=none;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="5D50KN5zPrAvzWpnFaVA-10" edge="1" source="5D50KN5zPrAvzWpnFaVA-2">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="95" y="158" as="sourcePoint"/>
-                        <Array as="points">
-                            <mxPoint x="167" y="158"/>
-                            <mxPoint x="240" y="159"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-29" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.3333333333333333;entryX=0;entryY=0.5;labelBackgroundColor=none;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="5D50KN5zPrAvzWpnFaVA-2" target="5D50KN5zPrAvzWpnFaVA-11" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="95.3" y="349.23" as="sourcePoint"/>
-                        <Array as="points">
-                            <mxPoint x="95" y="189"/>
-                            <mxPoint x="203" y="189"/>
-                            <mxPoint x="203" y="250"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-30" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.3333333333333333;entryX=0;entryY=0.5;labelBackgroundColor=none;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="5D50KN5zPrAvzWpnFaVA-3" target="5D50KN5zPrAvzWpnFaVA-12" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="23" y="329"/>
-                            <mxPoint x="568" y="329"/>
-                            <mxPoint x="568" y="209"/>
-                        </Array>
-                        <mxPoint x="95" y="347.41333333333336" as="sourcePoint"/>
-                        <mxPoint x="530.0000000000036" y="206.99999999999997" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-31" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.3333333333333333;entryX=0;entryY=0.5;labelBackgroundColor=none;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="5D50KN5zPrAvzWpnFaVA-3" target="5D50KN5zPrAvzWpnFaVA-13" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="95.2" y="597.11" as="sourcePoint"/>
-                        <Array as="points">
-                            <mxPoint x="168" y="386"/>
-                            <mxPoint x="240" y="386"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-32" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;entryX=0;entryY=0.5;labelBackgroundColor=none;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="5D50KN5zPrAvzWpnFaVA-3" target="5D50KN5zPrAvzWpnFaVA-14" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="96" y="428" as="sourcePoint"/>
-                        <mxPoint x="229.83999999999955" y="470.02" as="targetPoint"/>
-                        <Array as="points">
-                            <mxPoint x="94" y="386"/>
-                            <mxPoint x="94" y="480"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-33" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;entryX=0;entryY=0.5;labelBackgroundColor=none;" parent="1" source="5D50KN5zPrAvzWpnFaVA-4" target="5D50KN5zPrAvzWpnFaVA-16" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="187" y="629"/>
-                            <mxPoint x="677" y="630"/>
-                        </Array>
-                        <mxPoint x="98" y="630" as="sourcePoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-34" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.35;entryX=0;entryY=0.5;labelBackgroundColor=none;" parent="1" source="5D50KN5zPrAvzWpnFaVA-4" target="5D50KN5zPrAvzWpnFaVA-17" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="23" y="628"/>
-                            <mxPoint x="72" y="628"/>
-                            <mxPoint x="72" y="570"/>
-                        </Array>
-                        <mxPoint x="95.5" y="610.45" as="sourcePoint"/>
-                        <mxPoint x="516.25" y="628.73" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-35" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.3333333333333333;entryX=0;entryY=0.5;labelBackgroundColor=none;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="5D50KN5zPrAvzWpnFaVA-4" target="5D50KN5zPrAvzWpnFaVA-15" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="95.1" y="599.83" as="sourcePoint"/>
-                        <Array as="points">
-                            <mxPoint x="114" y="628"/>
-                            <mxPoint x="114" y="730"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-36" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;entryX=0;entryY=0.5;labelBackgroundColor=none;" parent="1" target="5D50KN5zPrAvzWpnFaVA-18" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="26" y="676"/>
-                            <mxPoint x="78" y="676"/>
-                            <mxPoint x="78" y="880"/>
-                        </Array>
-                        <mxPoint x="26" y="635" as="sourcePoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-37" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;entryX=0;entryY=0.5;labelBackgroundColor=none;" parent="1" target="5D50KN5zPrAvzWpnFaVA-19" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="26" y="664"/>
-                            <mxPoint x="96" y="664"/>
-                            <mxPoint x="96" y="805"/>
-                            <mxPoint x="550" y="805"/>
-                            <mxPoint x="550" y="880"/>
-                        </Array>
-                        <mxPoint x="26" y="631" as="sourcePoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-38" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0;exitY=0.3333333333333333;entryX=1;entryY=0.5;labelBackgroundColor=none;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="5D50KN5zPrAvzWpnFaVA-5" target="5D50KN5zPrAvzWpnFaVA-20" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="1787" y="303"/>
-                            <mxPoint x="1500" y="303"/>
-                            <mxPoint x="1500" y="160"/>
-                        </Array>
-                        <mxPoint x="1649.44" y="288.4" as="sourcePoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-39" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;entryX=1;entryY=0.5;labelBackgroundColor=none;" parent="1" target="5D50KN5zPrAvzWpnFaVA-21" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="1460" y="318"/>
-                            <mxPoint x="1460" y="250"/>
-                        </Array>
-                        <mxPoint x="1787" y="318" as="sourcePoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-40" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;entryX=1;entryY=0.5;labelBackgroundColor=none;" parent="1" target="5D50KN5zPrAvzWpnFaVA-22" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="1786" y="328"/>
-                        </Array>
-                        <mxPoint x="1786" y="318" as="sourcePoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-41" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;entryX=1;entryY=0.5;labelBackgroundColor=none;" parent="1" target="5D50KN5zPrAvzWpnFaVA-23" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="1786" y="348"/>
-                            <mxPoint x="1420" y="348"/>
-                            <mxPoint x="1420" y="439"/>
-                        </Array>
-                        <mxPoint x="1786" y="317" as="sourcePoint"/>
-                        <mxPoint x="1138.0000000000036" y="482.91999999999996" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-42" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;entryX=1;entryY=0.5;labelBackgroundColor=none;" parent="1" target="5D50KN5zPrAvzWpnFaVA-24" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="1786" y="325"/>
-                            <mxPoint x="1786" y="354"/>
-                            <mxPoint x="1460" y="354"/>
-                            <mxPoint x="1460" y="530"/>
-                        </Array>
-                        <mxPoint x="1786" y="318" as="sourcePoint"/>
-                        <mxPoint x="1141.5600000000036" y="562.92" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-43" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;entryX=1;entryY=0.5;labelBackgroundColor=none;" parent="1" target="5D50KN5zPrAvzWpnFaVA-26" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="1500" y="366"/>
-                            <mxPoint x="1500" y="621"/>
-                        </Array>
-                        <mxPoint x="1786" y="339" as="sourcePoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-44" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0;exitY=0.3333333333333333;entryX=1;entryY=0.5;labelBackgroundColor=none;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="5D50KN5zPrAvzWpnFaVA-6" target="5D50KN5zPrAvzWpnFaVA-25" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="1400" y="768"/>
-                            <mxPoint x="1255" y="769"/>
-                        </Array>
-                        <mxPoint x="1649.78" y="758.11" as="sourcePoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-45" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0;exitY=0.3333333333333333;entryX=1;entryY=0.5;labelBackgroundColor=none;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="5D50KN5zPrAvzWpnFaVA-6" target="5D50KN5zPrAvzWpnFaVA-27" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="1660" y="890"/>
-                        </Array>
-                        <mxPoint x="1646.78" y="759.07" as="sourcePoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-46" value="&amp;laquo;include&amp;raquo;" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontColor=#000000;fontStyle=1;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;rounded=1;verticalAlign=bottom;spacingBottom=8;spacingLeft=10;spacingRight=10;exitX=0.317;exitY=0.948;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="5D50KN5zPrAvzWpnFaVA-16" target="5D50KN5zPrAvzWpnFaVA-13" edge="1">
-                    <mxGeometry x="0.3919" y="9" relative="1" as="geometry">
-                        <mxPoint as="offset"/>
-                        <Array as="points">
-                            <mxPoint x="628" y="729"/>
-                            <mxPoint x="628" y="390"/>
-                        </Array>
-                        <mxPoint x="716" y="354" as="sourcePoint"/>
-                        <mxPoint x="533" y="396" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-47" style="endArrow=block;endSize=12;endFill=0;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=0;labelBackgroundColor=none;" parent="1" source="5D50KN5zPrAvzWpnFaVA-17" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="865" y="604" as="targetPoint"/>
-                        <Array as="points">
-                            <mxPoint x="457" y="522"/>
-                            <mxPoint x="865" y="522"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-48" value="&amp;laquo;include&amp;raquo;" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontColor=#000000;fontStyle=1;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.5;verticalAlign=bottom;spacingBottom=8;spacingLeft=10;spacingRight=10;" parent="1" source="5D50KN5zPrAvzWpnFaVA-16" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="935" y="355"/>
-                            <mxPoint x="934" y="355"/>
-                            <mxPoint x="934" y="328"/>
-                            <mxPoint x="977" y="328"/>
-                        </Array>
-                        <mxPoint x="977" y="329" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5D50KN5zPrAvzWpnFaVA-49" value="&amp;laquo;include&amp;raquo;" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;strokeWidth=1.5;fontSize=15;fontColor=#000000;fontStyle=1;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0;exitY=0.5;entryX=0;entryY=0.5;verticalAlign=bottom;spacingBottom=8;spacingLeft=10;spacingRight=10;" parent="1" source="5D50KN5zPrAvzWpnFaVA-25" target="5D50KN5zPrAvzWpnFaVA-27" edge="1">
-                    <mxGeometry x="-0.0155" y="-4" relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="974" y="768"/>
-                            <mxPoint x="910" y="768"/>
-                            <mxPoint x="910" y="890"/>
-                        </Array>
-                        <mxPoint as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="3" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="5D50KN5zPrAvzWpnFaVA-16" target="5D50KN5zPrAvzWpnFaVA-16" edge="1">
+                <mxCell id="g26" value="" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n21" target="n3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g27" value="" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n21" target="n4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g28" value="" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n21" target="n5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g29" value="" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n22" target="n6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g30" value="" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n22" target="n7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g31" value="" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n22" target="n8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g32" value="" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n22" target="n9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g33" value="" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n23" target="n10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g34" value="" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n23" target="n11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g35" value="" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n23" target="n12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g36" value="" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n24" target="n13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g37" value="" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n24" target="n14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g38" value="" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n24" target="n15" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g39" value="" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n24" target="n16" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g40" value="" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n25" target="n17" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g41" value="" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n25" target="n18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g42" value="" style="endArrow=block;endSize=14;endFill=0;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="n21" target="n22" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g43" value="" style="endArrow=block;endSize=14;endFill=0;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;labelBackgroundColor=none;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="n23" target="n22" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g44" value="«include»" style="endArrow=open;endSize=12;dashed=1;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=17;fontStyle=1;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=6;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n10" target="n20" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g45" value="«include»" style="endArrow=open;endSize=12;dashed=1;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=17;fontStyle=1;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=6;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n11" target="n20" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g46" value="«include»" style="endArrow=open;endSize=12;dashed=1;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=17;fontStyle=1;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=6;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n17" target="n19" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g47" value="«include»" style="endArrow=open;endSize=12;dashed=1;html=1;strokeColor=#000000;fontColor=#000000;fontFamily=Helvetica;strokeWidth=2;fontSize=17;fontStyle=1;labelBackgroundColor=none;verticalAlign=bottom;spacingBottom=6;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="n18" target="n19" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="n48" value="Associations are plain lines, generalisation is a hollow triangle, and «include» is a dashed open arrow pointing at the included use case. Eighteen use cases, five actors." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontColor=#000000;fontSize=17;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="1108" width="1220" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
