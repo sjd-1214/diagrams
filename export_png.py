@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 IntelliSwarm — Export Draw.io Diagrams to High-Resolution PNG
-Renders all 26 .drawio files in the current directory into:
+Renders all 23 .drawio files in the current directory into:
   - png/             (300 DPI, solid white background for printing/documents)
   - png_transparent/ (300 DPI, pure black lines/text on transparent background)
 """
