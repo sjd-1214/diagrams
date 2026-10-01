@@ -3,52 +3,54 @@
 UML and design diagrams for **IntelliSwarm**, the multi-UAV defensive
 simulation platform.
 
-The numeric prefix **is the figure number in `IntelliSwarm_SRS_v4.docx`**, so a
-figure in the document maps to its source without a lookup table. Files `27` to
-`30` are supporting artifacts the SRS does not carry as figures.
+The numeric prefix is the **presentation order**: requirements first, then the
+static structure, then interaction, state, activity and data flow. Each of the
+four newest artifacts opens the group it introduces rather than sitting at the
+end of the set — the brief and fully dressed use cases follow the use case
+diagram, the nine SSDs open the sequence group, and the whole-system activity
+diagram opens the activity group.
 
-**15, 19 and 25 are missing on purpose.** Those sources were removed in
-`1655109`, so the SRS cites three figures this repository no longer holds. The
-gap is kept rather than closed, because renumbering past it would break the one
-property this scheme exists for.
+The **SRS figure** column maps each file to `IntelliSwarm_SRS_v4.docx`. The
+prefix is no longer that number, so the mapping is written down here. The
+document's figures 15, 19 and 25 — the communication diagram, the sensor-fusion
+activity diagram and the RL training flow — have **no source in this
+repository**; they were removed in `1655109`.
 
-| # | file | diagram |
-|---|---|---|
-| 1 | `01_use_case_diagram` | Use case diagram |
-| 2 | `02_class_ros2_nodes` | ROS 2 node class diagram |
-| 3 | `03_class_backend_services` | Backend services class diagram |
-| 4 | `04_class_frontend_models` | Frontend data models class diagram |
-| 5 | `05_component_diagram` | Component diagram |
-| 6 | `06_deployment_diagram` | Deployment diagram |
-| 7 | `07_domain_model` | Conceptual domain model |
-| 8 | `08_layer_diagram` | Layered architecture |
-| 9 | `09_er_diagram_telemetry` | Telemetry database ER diagram |
-| 10 | `10_structure_chart` | Functional decomposition structure chart |
-| 11 | `11_sequence_telemetry` | SSD: real time telemetry flow |
-| 12 | `12_sequence_command` | SSD: command execution |
-| 13 | `13_sequence_mission` | SSD: autonomous mission execution |
-| 14 | `14_sequence_sensor_fusion` | SSD: sensor fusion pipeline |
-| 15 | — | Communication diagram: ROS 2 topics *(source removed)* |
-| 16 | `16_state_drone` | State machine: drone operational states |
-| 17 | `17_state_system` | State machine: system lifecycle |
-| 18 | `18_activity_mission` | Activity: 2v2 mission execution |
-| 19 | — | Activity: sensor fusion algorithm *(source removed)* |
-| 20 | `20_sequence_base_spawn_sensor` | SSD: base placement, spawn and sensing |
-| 21 | `21_sequence_cyberattack_threat` | SSD: cyberattack application |
-| 22 | `22_sequence_logging_replay` | SSD: logging and replay |
-| 23 | `23_data_flow_diagram_dfd` | Level 1 data flow diagram |
-| 24 | `24_interaction_overview_diagram` | Interaction overview diagram |
-| 25 | — | Policy training and serving pipeline *(source removed)* |
-| 26 | `26_algorithm_design_flow` | Guidance loop algorithm design |
-| — | `27_use_case_high_level` | High level (brief) use cases, all eighteen |
-| — | `28_use_case_expanded` | Expanded (fully dressed) use case, two column |
-| — | `29_activity_system_overview` | Activity diagram of the whole system |
-| — | `30_system_sequence_diagrams` | Nine SSDs, one per user interaction |
+| # | file | diagram | SRS figure |
+|---|---|---|---|
+| 1 | `01_use_case_diagram` | Use case diagram | 1 |
+| 2 | `02_use_case_high_level` | High level (brief) use cases, all eighteen | — |
+| 3 | `03_use_case_expanded` | Expanded (fully dressed) use case, two column | — |
+| 4 | `04_class_ros2_nodes` | ROS 2 node class diagram | 2 |
+| 5 | `05_class_backend_services` | Backend services class diagram | 3 |
+| 6 | `06_class_frontend_models` | Frontend data models class diagram | 4 |
+| 7 | `07_component_diagram` | Component diagram | 5 |
+| 8 | `08_deployment_diagram` | Deployment diagram | 6 |
+| 9 | `09_domain_model` | Conceptual domain model | 7 |
+| 10 | `10_layer_diagram` | Layered architecture | 8 |
+| 11 | `11_er_diagram_telemetry` | Telemetry database ER diagram | 9 |
+| 12 | `12_structure_chart` | Functional decomposition structure chart | 10 |
+| 13 | `13_system_sequence_diagrams` | Nine SSDs, one per user interaction | — |
+| 14 | `14_sequence_telemetry` | SSD: real time telemetry flow | 11 |
+| 15 | `15_sequence_command` | SSD: command execution | 12 |
+| 16 | `16_sequence_mission` | SSD: autonomous mission execution | 13 |
+| 17 | `17_sequence_sensor_fusion` | SSD: sensor fusion pipeline | 14 |
+| 18 | `18_state_drone` | State machine: drone operational states | 16 |
+| 19 | `19_state_system` | State machine: system lifecycle | 17 |
+| 20 | `20_activity_system_overview` | Activity diagram of the whole system | — |
+| 21 | `21_activity_mission` | Activity: 2v2 mission execution | 18 |
+| 22 | `22_sequence_base_spawn_sensor` | SSD: base placement, spawn and sensing | 20 |
+| 23 | `23_sequence_cyberattack_threat` | SSD: cyberattack application | 21 |
+| 24 | `24_sequence_logging_replay` | SSD: logging and replay | 22 |
+| 25 | `25_data_flow_diagram_dfd` | Level 1 data flow diagram | 23 |
+| 26 | `26_interaction_overview_diagram` | Interaction overview diagram | 24 |
+| 27 | `27_algorithm_design_flow` | Guidance loop algorithm design | 26 |
 
-`27` and `28` follow Larman, *Applying UML and Patterns*, §6.5 (brief, casual,
+`02` and `03` follow Larman, *Applying UML and Patterns*, §6.5 (brief, casual,
 fully dressed) and §6.6 (the two-column variation). Those are written use case
 formats rather than graph diagrams, which is why they are tables; `01` is the
 use case *diagram* and is a separate artifact.
 
 Sources are draw.io (`.drawio`); `png/` and `png_transparent/` hold 300 DPI
-exports regenerated by `export_png.py`. `27` to `30` have no exports yet.
+exports regenerated by `export_png.py`. The four newest files have no exports
+yet.
